@@ -1,8 +1,8 @@
-
+// UART Testbench Files
 dv/dv_pkg.sv
+dv/uart_tb.sv
 
-dv/blinky_tb.sv
-
+// Verilator Options
 --timing
 -j 0
 -Wall

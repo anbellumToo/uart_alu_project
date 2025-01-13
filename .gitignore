@@ -5,3 +5,7 @@ __pycache__
 *gls_dir
 *.fst
 build
+
+oss-cad-suite-linux-x64-20240925.tgz
+sv2v-Linux.zip
+verible-v0.0-3831-g32b2456e-linux-static-x86_64.tar.gz

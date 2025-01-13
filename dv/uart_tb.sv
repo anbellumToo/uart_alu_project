@@ -31,6 +31,7 @@ task send_uart_byte(input logic [7:0] uart_byte);
         for (i = 0; i < 8; i = i + 1) begin
             rxd_i <= uart_byte[i];
             #(8680);
+            $display(txd_o);
         end
 
         rxd_i <= 1;

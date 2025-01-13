@@ -12,3 +12,6 @@ rtl/counter.sv
 rtl/elastic.sv
 rtl/fifo_1r1w.sv
 rtl/ram_1r1w_sync.sv
+
+rtl/uart_top.sv
+rtl/pll.sv

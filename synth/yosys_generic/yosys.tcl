@@ -1,11 +1,11 @@
+read_verilog rtl/uart_top.sv
+read_verilog rtl/pll.sv
+read_verilog rtl/uart_mod.sv
 
-yosys -import
+read_verilog third_party/alexforencich_uart/rtl/uart_rx.v
+read_verilog third_party/alexforencich_uart/rtl/uart_tx.v
 
-read_verilog synth/build/rtl.sv2v.v
-read_verilog -sv synth/yosys_generic/blinky_sim.sv
 
-prep
-opt -full
-stat
+synth_ice40 -json synth/netlist.json -top top
 
-write_verilog -noexpr -noattr -simple-lhs synth/yosys_generic/build/synth.v
+write_verilog -noexpr -noattr -simple-lhs synth/netlist.v

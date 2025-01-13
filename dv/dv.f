@@ -1,8 +1,6 @@
-// UART Testbench Files
 dv/dv_pkg.sv
 dv/uart_tb.sv
 
-// Verilator Options
 --timing
 -j 0
 -Wall
@@ -11,7 +9,6 @@ dv/uart_tb.sv
 --trace-structs
 --main-top-name "-"
 
-// Run with +verilator+rand+reset+2
 --x-assign unique
 --x-initial unique
 

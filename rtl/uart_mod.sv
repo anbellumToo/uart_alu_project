@@ -4,21 +4,11 @@ module uart_mod (
     input wire clk_i,
     input wire rst_i,
     input wire rxd_i,
-    output wire debug_rx_valid,
-    output wire debug_tx_ready,
-    output wire [7:0] debug_rx_data,
+    output wire rx_valid,
+    output wire tx_ready,
+    output wire [7:0] rx_data,
     output wire txd_o
 );
-
-wire [7:0] rx_data;
-wire [7:0] tx_data;
-wire rx_valid;
-wire tx_ready;
-wire tx_valid;
-
-assign debug_rx_valid = rx_valid;
-assign debug_tx_ready = tx_ready;
-assign debug_rx_data = rx_data;
 
 uart_rx #(
     .DATA_WIDTH(8)

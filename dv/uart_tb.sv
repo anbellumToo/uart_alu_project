@@ -12,41 +12,54 @@ module uart_tb;
     logic tx_valid;
     logic [7:0] tx_data;
 
+    logic debug_rx_valid;
+    logic debug_tx_ready;
+    logic [7:0] debug_rx_data;
+
     uart_mod uut (
         .clk_i(clk_i),
         .rst_i(rst_i),
         .rxd_i(rxd_i),
-        .txd_o(txd_o)
+        .txd_o(txd_o),
+        .debug_rx_valid(debug_rx_valid),
+        .debug_tx_ready(debug_tx_ready),
+        .debug_rx_data(debug_rx_data)
     );
 
-    always #5 clk_i = ~clk_i;
+    always #10 clk_i = ~clk_i;
 
 task send_uart_byte(input logic [7:0] uart_byte);
     integer i;
     begin
 
-        rxd_i <= 0;
+        rxd_i = '0;
         #(8680);
+        $display("Start bit sent: rxd_i=%b, txd_o=%b, debug_rx_valid=%b, debug_rx_data=%h",
+            rxd_i, txd_o, debug_rx_valid, debug_rx_data);
+
 
         for (i = 0; i < 8; i = i + 1) begin
-            rxd_i <= uart_byte[i];
+            rxd_i = uart_byte[i];
             #(8680);
-            $display(txd_o);
+            $display("Sending bit %0d: rxd_i=%b, txd_o=%b, debug_rx_valid=%b, debug_rx_data=%h",
+                     i, rxd_i, txd_o, debug_rx_valid, debug_rx_data);
         end
 
-        rxd_i <= 1;
+        rxd_i = '1;
         #(8680);
+        $display("Stop bit sent: rxd_i=%b, txd_o=%b, debug_rx_valid=%b, debug_rx_data=%h",
+                 rxd_i, txd_o, debug_rx_valid, debug_rx_data);
     end
 endtask
 
     initial begin
-        clk_i = 0;
-        rst_i = 1;
-        rxd_i = 1;
+        clk_i = '0;
+        rst_i = '1;
+        rxd_i = '1;
 
-        #20;
+        #10000;
 
-        rst_i = 0;
+        rst_i = '0;
 
         $display("Sending UART data...");
         send_uart_byte(8'h55);
@@ -59,7 +72,6 @@ endtask
         $finish;
     end
 
-
     initial begin
         $monitor(
             "Time=%0t | rxd_i=%b | txd_o=%b | rx_valid=%b | rx_data=%h | tx_valid=%b | tx_ready=%b | tx_data=%h",
@@ -69,7 +81,7 @@ endtask
 
     initial begin
         $dumpfile("waveform.vcd");
-        $dumpvars(0, uart_alu_wrapper_tb);
+        $dumpvars(0,uart_tb);
         $dumpvars(1, uut);
     end
 

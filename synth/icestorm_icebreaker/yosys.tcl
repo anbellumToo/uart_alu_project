@@ -1,7 +1,13 @@
 
 yosys -import
 
-read_verilog synth/build/rtl.sv2v.v synth/icestorm_icebreaker/icebreaker.v
+read_verilog synth/build/rtl.sv2v.v
+
+read_verilog third_party/alexforencich_uart/rtl/uart_rx.v
+read_verilog third_party/alexforencich_uart/rtl/uart_tx.v
+read_verilog third_party/alexforencich_uart/rtl/uart.v
+
+read_verilog synth/icestorm_icebreaker/icebreaker.v
 
 synth_ice40 -top icebreaker
 

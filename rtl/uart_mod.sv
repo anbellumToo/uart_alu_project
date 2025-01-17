@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 
 module uart_mod (
-    input wire clk_i,
-    input wire rst_i,
-    input wire rxd_i,
-    output wire rx_valid,
-    output wire tx_ready,
-    output wire [7:0] rx_data,
-    output wire txd_o
+    input [0:0] clk_i,
+    input [0:0] rst_i,
+    input [0:0] rxd_i,
+    output [0:0] rx_valid,
+    output [0:0] tx_ready,
+    output [7:0] rx_data,
+    output [0:0] txd_o
 );
 
 uart_rx #(
@@ -37,5 +37,8 @@ uart_tx #(
     .busy(),
     .prescale(16'd54)
 );
+
+//assign txd_o = rxd_i;
+// Immediate loopback
 
 endmodule

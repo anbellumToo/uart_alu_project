@@ -3,6 +3,9 @@
 # 12 MHz clock
 set_io -nowarn CLK        35
 
-# LEDs and Button
+# UART signals
+set_io -nowarn rxd_i       6
+set_io -nowarn txd_o       9
+
 set_io -nowarn BTN_N      10
 set_io -nowarn LEDG_N     37

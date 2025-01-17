@@ -1,5 +1,6 @@
 dv/dv_pkg.sv
 dv/uart_tb.sv
+dv/uart_runner.sv
 
 --timing
 -j 0

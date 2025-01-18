@@ -38,7 +38,4 @@ uart_tx #(
     .prescale(16'd54)
 );
 
-//assign txd_o = rxd_i;
-// Immediate loopback
-
 endmodule

@@ -9,14 +9,16 @@ module uart_tb
     initial begin
         $dumpfile("waveform.vcd");
         $dumpvars(0,uart_tb);
-        $dumpvars(1, uart_runner.uart_dut);
+        $dumpvars(1, uart_runner.dut);
 
         uart_runner.reset();
 
         $display("Sending UART data...");
 
         uart_runner.send_uart_byte(8'h55);
+        #10000
         uart_runner.send_uart_byte(8'hAA);
+        #10000
         uart_runner.send_uart_byte(8'hF0);
 
         $display("End simulation.");

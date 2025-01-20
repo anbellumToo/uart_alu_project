@@ -5,43 +5,33 @@ module icebreaker (
     output wire txd_o,
     output wire LEDG_N
 );
-    wire clk_12 = CLK;
-    wire clk_50;
+    wire clk_12 = CLK;        // Incoming 12 MHz clock
+    wire clk_30;              // PLL-generated 50 MHz clock
 
-    wire pll_lock;
-    wire rx_valid;
-    wire tx_ready;
-    wire [7:0] rx_data;
-    wire led;
-    assign LEDG_N = ~led;
-
-    // icepll -i 12 -o 50
+    // icepll -i 12 -o 30
     SB_PLL40_PAD #(
         .FEEDBACK_PATH("SIMPLE"),
         .DIVR(4'd0),
-        .DIVF(7'd66),
-        .DIVQ(3'd4),
+        .DIVF(7'd79),
+        .DIVQ(3'd5),
         .FILTER_RANGE(3'd1)
     ) pll (
-        .LOCK(),
+        .LOCK(pll_lock),
         .RESETB(1'b1),
         .BYPASS(1'b0),
         .PACKAGEPIN(clk_12),
-        .PLLOUTGLOBAL(clk_50)
+        .PLLOUTGLOBAL(clk_30)
     );
 
-   uart_runner.reset();
 
-    uart_mod uart_inst (
-        .clk_i(clk_50),
-        .rst_i(BTN_N),
-        .rxd_i(rxd_i),
-        .txd_o(txd_o),
-        .rx_valid(rx_valid),
-        .tx_ready(tx_ready),
-        .rx_data(rx_data)
+    // UART ALU instance
+    uart_alu uart_inst (
+        .clk_i       (clk_30),      // 50 MHz clock from PLL
+        .rst_i       (BTN_N),       // Reset signal from button
+        .rxd_i       (rxd_i),       // UART RX input
+        .txd_o       (txd_o),       // UART TX output
     );
 
-    assign led = rxd_i;
+    assign LEDG_N = ~BTN_N;
 
 endmodule

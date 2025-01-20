@@ -18,7 +18,7 @@ module uart_runner;
     initial begin
         pll_out = 0;
         forever begin
-            #10.000ns; // 50 MHz
+            #16.660ns; // 50 MHz
             pll_out = !pll_out;
         end
     end
@@ -31,7 +31,6 @@ module uart_runner;
         #10000;
         BTN_N <= '0;
     endtask
-
 
     always @(posedge !LEDG_N) $info("LED On");
     always @(negedge !LEDG_N) $info("LED Off");

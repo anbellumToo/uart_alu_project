@@ -12,7 +12,7 @@ module uart_runner;
     wire tx_ready;     // Changed to wire
     wire [7:0] rx_data; // Changed to wire
 
-    localparam realtime ClockPeriod = 20.0;
+    localparam realtime ClockPeriod = 33.0;
 
     initial begin
         clk_i = 0;
@@ -22,46 +22,40 @@ module uart_runner;
         end
     end
 
-    // Instantiate uart_mod as the DUT
-    uart_alu dut (
-        .clk_i        (clk_i),
-        .rst_i        (rst_i),
-        .tx_data_in   (tx_data_in),   // Data input for TX
-        .tx_valid_in  (tx_valid_in), // Valid input for TX
-        .rxd_i        (1'b1),        // No external RX input for now
-        .txd_o        (txd_o),
-        .rx_valid     (rx_valid),
-        .tx_ready     (tx_ready),
-        .rx_data      (rx_data)
+    uart_alu uart_dut (
+        .clk_i(clk_i),
+        .rst_i(rst_i),
+        .rxd_i(rxd_i),
+        .txd_o(txd_o)
     );
 
-    task automatic reset;
-        rst_i <= 0;
-        tx_data_in = 8'h00;
-        tx_valid_in = 1'b0;
-        repeat (10) @(posedge clk_i); // Hold reset for 10 cycles
-        rst_i <= 1;
-    endtask
+task automatic reset;
+    rst_i <= 0;
+    @(posedge clk_i);
+    rst_i <= 1;
+endtask
 
-    // Task to send data
-    task send_uart_byte(input logic [7:0] data);
+    task send_uart_byte(input logic [7:0] uart_byte);
+        integer i;
         begin
-            wait (tx_ready);  // Wait for TX to be ready
-            @(posedge clk_i);
-            tx_data_in <= data;
-            tx_valid_in <= 1'b1;
-            @(posedge clk_i);
-            tx_valid_in <= 1'b0;  // Deassert valid after one cycle
-            $display("Sent data: 0x%02h", data);
-            #90000;
+
+            rxd_i = '0;
+            #(8680);
+            $display("Start bit sent: rxd_i=%b, txd_o=%b, rx_valid=%b, rx_data=%h",
+                rxd_i, txd_o, rx_valid, rx_data);
+
+            for (i = 0; i < 8; i = i + 1) begin
+                rxd_i = uart_byte[i];
+                #(8680);
+                $display("Sending bit %0d: rxd_i=%b, txd_o=%b, rx_valid=%b, rx_data=%h",
+                        i, rxd_i, txd_o, rx_valid, rx_data);
+            end
+
+            rxd_i = '1;
+            #(8680);
+            $display("Stop bit sent: rxd_i=%b, txd_o=%b, rx_valid=%b, rx_data=%h",
+                    rxd_i, txd_o, rx_valid, rx_data);
         end
     endtask
-
-    // Monitor RX data
-    always @(posedge clk_i) begin
-        if (rx_valid) begin
-            $display("Received data: 0x%02h at time %t", rx_data, $time);
-        end
-    end
 
 endmodule

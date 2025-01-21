@@ -1,41 +1,61 @@
 `timescale 1ns / 1ps
 
-module uart_mod (
-    input [0:0] clk_i,
-    input [0:0] rst_i,
-    input [0:0] rxd_i,
-    output [0:0] txd_o
-);
+module uart_mod
+  #(parameter DATA_WIDTH_P  = 8,
+    parameter PRESCALE_P    = 16'd32)
+  (
+    input  wire              clk_i,
+    input  wire              rst_i,
+    input  wire              rxd_i,
+    output wire              txd_o
+  );
 
-wire rx_valid, tx_ready;
-wire [7:0] rx_data;
+  wire                     rx_valid;
+  wire [DATA_WIDTH_P-1:0]  rx_data;
+  wire                     rx_ready;
 
-uart_rx #(
-    .DATA_WIDTH(8)
-) uart_rx_inst (
-    .clk(clk_i),
-    .rst(rst_i),
-    .m_axis_tdata(rx_data),
-    .m_axis_tvalid(rx_valid),
-    .m_axis_tready(tx_ready),
-    .rxd(rxd_i),
-    .busy(),
-    .overrun_error(),
-    .frame_error(),
-    .prescale(16'd32)
-);
+  wire                     tx_valid;
+  wire [DATA_WIDTH_P-1:0]  tx_data;
+  wire                     tx_ready;
 
-uart_tx #(
-    .DATA_WIDTH(8)
-) uart_tx_inst (
-    .clk(clk_i),
-    .rst(rst_i),
-    .s_axis_tdata(rx_data),
-    .s_axis_tvalid(rx_valid),
-    .s_axis_tready(tx_ready),
-    .txd(txd_o),
-    .busy(),
-    .prescale(16'd32)
-);
+  uart_rx #(
+    .DATA_WIDTH(DATA_WIDTH_P)
+  ) rx_inst (
+    .clk           (clk_i),
+    .rst           (rst_i),
+    .rxd           (rxd_i),
+    .m_axis_tdata  (rx_data),
+    .m_axis_tvalid (rx_valid),
+    .m_axis_tready (rx_ready),
+    .prescale      (PRESCALE_P),
+    .busy          (),
+    .overrun_error (),
+    .frame_error   ()
+  );
+
+  uart_tx #(
+    .DATA_WIDTH(DATA_WIDTH_P)
+  ) tx_inst (
+    .clk           (clk_i),
+    .rst           (rst_i),
+    .s_axis_tdata  (tx_data),
+    .s_axis_tvalid (tx_valid),
+    .s_axis_tready (tx_ready),
+    .txd           (txd_o),
+    .busy          (),
+    .prescale      (PRESCALE_P)
+  );
+
+  packet_parser parser_inst (
+    .clk_i         (clk_i),
+    .rst_i         (rst_i),
+
+    .rx_valid_i    (rx_valid),
+    .rx_data_i     (rx_data),
+
+    .tx_data_o     (tx_data),
+    .tx_valid_o    (tx_valid)
+  );
+
 
 endmodule

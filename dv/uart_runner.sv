@@ -58,45 +58,41 @@ endtask
         end
     endtask
 
-    // Task for sending a structured UART packet
-    task automatic send_uart_packet(
-        input logic [7:0] opcode,
-        input logic [31:0] operand1,
-        input logic [31:0] operand2
+    task send_uart_packet(
+        input logic [7:0] opcode,             // Opcode field
+        input logic [7:0] reserved,           // Reserved field
+        input logic [7:0] length_lsb,         // Length LSB (byte count)
+        input logic [7:0] length_msb,         // Length MSB (byte count)
+        input logic [7:0] payload [0:15]      // Payload data (up to 16 bytes)
     );
-        logic [15:0] length;
-        logic [7:0] uart_byte;
         integer i;
-
-        // Packet length calculation (opcode + reserved + length + operands)
-        length = 4 + 8; // 4 header bytes + 8 operand bytes
+        integer data_length;
 
         begin
-            $display("Sending UART Packet - Opcode: %h, Operand1: %h, Operand2: %h", opcode, operand1, operand2);
-
-            // Send Opcode
             send_uart_byte(opcode);
 
             // Send Reserved Byte
-            send_uart_byte(8'h00);
+            send_uart_byte(reserved);
 
-            // Send Length (LSB then MSB)
-            send_uart_byte(length[7:0]);
-            send_uart_byte(length[15:8]);
+            // Send Length (LSB then MSB for little-endian)
+            send_uart_byte(length_lsb);
+            send_uart_byte(length_msb);
 
-            // Send Operand1 (LSB first)
-            for (i = 0; i < 4; i = i + 1) begin
-                uart_byte = operand1[i * 8 +: 8];
-                send_uart_byte(uart_byte);
+            // Calculate data length
+            data_length = {length_msb, length_lsb}; // Combine MSB and LSB
+
+            // Send Payload Bytes
+            for (i = 0; i < data_length; i = i + 1) begin
+                send_uart_byte(payload[i]);
             end
 
-            // Send Operand2 (LSB first)
-            for (i = 0; i < 4; i = i + 1) begin
-                uart_byte = operand2[i * 8 +: 8];
-                send_uart_byte(uart_byte);
-            end
+            $display("Packet Sent - Opcode: %0h, Reserved: %0h, Length: %0d, Payload: %p",
+                    opcode, reserved, data_length, payload);
 
-            $display("Packet Sent.");
+           #(8680 * 10); // Adjust as necessary, e.g., 10 bit times
+
         end
     endtask
+
+
 endmodule

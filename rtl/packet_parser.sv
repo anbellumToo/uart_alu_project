@@ -23,6 +23,9 @@ module packet_parser (
 
     logic [31:0] operand1_d, operand1_q;
     logic [31:0] operand2_d, operand2_q;
+    logic [7:0] operand_d [0:15]; // Combinational next-state operand array
+    logic [7:0] operand_q [0:15]; // Sequential current-state operand array
+
     logic [31:0] result_d, result_q;
 
     logic [7:0] byte_count_d, byte_count_q;
@@ -30,6 +33,18 @@ module packet_parser (
     logic [7:0] msb_d, msb_q;
     logic [7:0] opcode_d, opcode_q;
     logic [7:0] rx_data_prev;
+
+    always_ff @(posedge clk_i or posedge rst_i) begin
+        if (rst_i) begin
+            for (int i = 0; i < 16; i++) begin
+                operand_q[i] <= 8'h00;
+            end
+        end else begin
+            for (int i = 0; i < 16; i++) begin
+                operand_q[i] <= operand_d[i];
+             end
+        end
+    end
 
     always_ff @(posedge clk_i) begin
         if (rst_i) begin
@@ -58,7 +73,7 @@ module packet_parser (
     always_ff @(negedge clk_i) begin
         if (rst_i) begin
             byte_count_d <= 8'b0;
-        end else if (state_q == RECEIVE && rx_valid_i && (rx_data_i != rx_data_prev)) begin
+        end else if (state_q == RECEIVE && rx_valid_i) begin
             byte_count_d <= byte_count_q + 1;
         end else if (state_q != RECEIVE) begin
             byte_count_d <= 8'b0;
@@ -69,6 +84,7 @@ module packet_parser (
         state_d = state_q;
         operand1_d = operand1_q;
         operand2_d = operand2_q;
+        operand_d = operand_q;
         result_d = result_q;
         lsb_d = lsb_q;
         msb_d = msb_q;
@@ -92,15 +108,14 @@ module packet_parser (
                         2: lsb_d = rx_data_prev; // Capture LSB of length
                         3: msb_d = rx_data_prev; // Capture MSB of length
 
-                        // Capture operand1
-                        4: operand1_d[7:0] = rx_data_prev;
-                        5: operand2_d[7:0] = rx_data_prev;
-
                         default: begin
-                            if (msb_q > lsb_q) begin
-                                state_d = IDLE; // Reset to IDLE state on error
-                            end else if ((byte_count_q >= 6) || (opcode_q == 8'hEC && byte_count_q == 5)) begin
-                                state_d = COMPUTE; // Transition to COMPUTE
+                            if (byte_count_q >= 4 && byte_count_q < 4 + lsb_q) begin
+                                operand_d[byte_count_q - 4] = rx_data_prev; // Store in operand array
+                            end
+                            if (byte_count_q == 3 + lsb_q - 1) begin
+                                state_d = COMPUTE;
+                            end else if (msb_q > lsb_q) begin
+                                state_d = IDLE;
                             end
                         end
                     endcase
@@ -109,10 +124,18 @@ module packet_parser (
 
             COMPUTE: begin
                 case (opcode_q)
-                    OPCODE_ECHO: result_d = echo(operand1_q);
-                    OPCODE_ADD32: result_d = operand1_q + operand2_q;
-                    OPCODE_MUL32: result_d = operand1_q * operand2_q;
-                    OPCODE_DIV32: result_d = (operand2_q != 0) ? (operand1_q / operand2_q) : 32'b0;
+                    OPCODE_ECHO: begin
+                        result_d = 128'b0;
+                        for (int i = 0; i < 16; i++) begin
+                            if (i < lsb_q) begin
+                                result_d[i * 8 +: 8] = operand_q[i];
+                            end
+                        end
+                    end
+                    OPCODE_ADD32: result_d = operand_q[0] + operand_q[4];
+                    OPCODE_MUL32: result_d = operand_q[0] * operand_q[4];
+                    OPCODE_DIV32: result_d = (operand_q[4] != 0) ? (operand_q[0] / operand_q[4]) : 32'b0;
+                    default: result_d = 32'b0;
                 endcase
                 state_d = TRANSMIT;
             end
@@ -122,14 +145,10 @@ module packet_parser (
                 tx_valid_o = 1'b1;
                 result_d = result_q >> 8;
                 if (result_q == 0) begin
-                    state_d = IDLE;
+                    state_d = RECEIVE;
                 end
             end
         endcase
     end
-
-    function logic [31:0] echo(input logic [31:0] message);
-        echo = message;
-    endfunction
 
 endmodule

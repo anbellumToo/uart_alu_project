@@ -153,3 +153,56 @@ endmodule
                         for (int i = lsb_d, i <= msb_d, i++) begin
                                 4 + i =
                         end
+
+
+`timescale 1ns / 1ps
+
+module uart_tb;
+
+    uart_runner uart_runner();
+
+    // Parameters for fuzz testing
+    localparam int NUM_FUZZ_TESTS = 1000;
+    localparam int MAX_PAYLOAD_SIZE = 16; // Fixed max payload size
+
+    initial begin
+        $dumpfile("waveform.vcd");
+        $dumpvars(0, uart_tb);
+        $dumpvars(1, uart_runner.uart_dut);
+
+        uart_runner.reset();
+
+        $display("Starting Fuzz Testing...");
+
+        for (int i = 0; i < NUM_FUZZ_TESTS; i++) begin
+            fuzz_test();
+        end
+
+        $display("Fuzz Testing Completed.");
+        $finish;
+    end
+
+    // Fuzz Test Task
+    task automatic fuzz_test();
+        logic [7:0] opcode;
+        logic [7:0] reserved = 8'h00;
+        logic [15:0] length;
+        logic [7:0] payload [0:16 - 1]; // Static array
+        int payload_size;
+
+        // Randomize values
+        opcode = $urandom_range(8'hA0, 8'hEC)[7:0]; // Cast to 8 bits
+        payload_size = $urandom_range(1, MAX_PAYLOAD_SIZE);
+        for (int i = 0; i < payload_size; i++) begin
+            payload[i] = $urandom_range(0, 255)[7:0]; // Cast to 8 bits
+        end
+        length = payload_size;
+
+        // Log the test case
+        $display("Fuzz Test #%0d - Opcode: %0h, Length: %0d, Payload: %p", $time, opcode, length, payload);
+
+        // Send the packet
+        uart_runner.send_uart_packet(opcode, reserved, length, payload, payload_size);
+    endtask
+
+endmodule

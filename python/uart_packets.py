@@ -44,16 +44,16 @@ def read_thread(ser):
 
 def build_packet(opcode, payload):
     reserved = 0x00
-    total_length = 4 + len(payload)
-    length_lsb = total_length & 0xFF
-    length_msb = (total_length >> 8) & 0xFF
+    data_length = len(payload)  # Length of the data payload
+    length_lsb = data_length & 0xFF
+    length_msb = (data_length >> 8) & 0xFF
 
     packet = bytearray()
-    packet.append(opcode)
-    packet.append(reserved)
-    packet.append(length_lsb)
-    packet.append(length_msb)
-    packet.extend(payload)
+    packet.append(opcode)       # Opcode
+    packet.append(reserved)     # Reserved
+    packet.append(length_lsb)   # Length (LSB)
+    packet.append(length_msb)   # Length (MSB)
+    packet.extend(payload)      # Data payload
     return packet
 
 def echo(ser, message):
@@ -90,7 +90,7 @@ def main():
     if len(sys.argv) > 1:
         port = sys.argv[1]
     else:
-        port = "/dev/ttyUSB1"
+        port = "/dev/ttyUSB0"
 
     ser = serial.Serial(port=port, baudrate=115200, timeout=1)
 

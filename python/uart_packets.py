@@ -2,6 +2,7 @@
 import serial
 import threading
 import sys
+import time
 
 OPCODE_ECHO = 0xEC
 OPCODE_ADD32 = 0xA0
@@ -27,7 +28,8 @@ def read_thread(ser):
         data = ser.read(ser.in_waiting or 1)
         if data:
             buffer.extend(data)
-            print(f"RX (raw bytes): {list(data)}")
+            print(f"RX (raw bytes): {list(data)}")  # Print raw RX data continuously
+            print(f"RX raw data buffer: {list(buffer)}")  # Print the full buffer
 
             while len(buffer) >= 4:
                 length_lsb = buffer[1]
@@ -90,7 +92,7 @@ def main():
     if len(sys.argv) > 1:
         port = sys.argv[1]
     else:
-        port = "/dev/ttyUSB0"
+        port = "/dev/ttyUSB2"
 
     ser = serial.Serial(port=port, baudrate=115200, timeout=1)
 

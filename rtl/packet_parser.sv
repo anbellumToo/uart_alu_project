@@ -24,9 +24,8 @@ module packet_parser (
 
     logic [31:0] operand1_d, operand1_q;
     logic [31:0] operand2_d, operand2_q;
-    logic [7:0] operand_d [0:15]; // Combinational next-state operand array
-    logic [7:0] operand_q [0:15]; // Sequential current-state operand array
-
+    logic [7:0] operand_d [0:15];
+    logic [7:0] operand_q [0:15];
     logic [31:0] result_d, result_q;
 
     logic [7:0] byte_count_d, byte_count_q;
@@ -42,14 +41,12 @@ module packet_parser (
     logic [31:0] mul_result, div_quotient, div_remainder;
 
 
-// Instantiate modules
 adder add_inst (
     .a_i(operand1_q),
     .b_i(operand2_q),
     .sum_o(add_result)
 );
 
-    // Instantiate 32-bit iterative multiplier
 bsg_imul_iterative #(.width_p(32)) mul_inst (
     .clk_i(clk_i),
     .reset_i(rst_i),
@@ -59,10 +56,10 @@ bsg_imul_iterative #(.width_p(32)) mul_inst (
     .signed_opA_i(1'b0),
     .opB_i(operand2_q),
     .signed_opB_i(1'b0),
-    .gets_high_part_i(1'b0), // Only use the low part of the product
+    .gets_high_part_i(1'b0),
     .v_o(),
     .result_o(mul_result),
-    .yumi_i(1'b1) // Always accept the result
+    .yumi_i(1'b1)
 );
 
     always_ff @(posedge clk_i or posedge rst_i) begin
@@ -126,40 +123,40 @@ bsg_imul_iterative #(.width_p(32)) mul_inst (
 
         case (state_q)
             IDLE: begin
+                result_d = 32'b0;
                 if (rx_valid_i) begin
                     state_d = RECEIVE;
                 end
             end
 
             RECEIVE: begin
-                if (rx_valid_i) begin
-                    case (byte_count_q)
-                        0: opcode_d = rx_data_prev;
-                        1: ;
-                        2: lsb_d = rx_data_prev;
-                        3: msb_d = rx_data_prev;
+                case (byte_count_q)
+                    0: opcode_d = rx_data_prev;
+                    1: ;
+                    2: lsb_d = rx_data_prev;
+                    3: msb_d = rx_data_prev;
 
-                        default: begin
-                            if (byte_count_q >= 4 && byte_count_q < 4 + lsb_q) begin
-                                operand_d[byte_count_q - 4] = rx_data_prev;
-                            end
-                            if (byte_count_q == 4 + lsb_q - 1) begin
-                                state_d = COMPUTE;
-                            end else if (msb_q > lsb_q) begin
-                                state_d = IDLE;
-                            end
+                    default: begin
+                        if (byte_count_q >= 4 && byte_count_q < 4 + lsb_q) begin
+                            operand_d[byte_count_q - 4] = rx_data_prev;
                         end
-                    endcase
-                end
+                        if (byte_count_q == 4 + lsb_q - 1) begin
+                            state_d = COMPUTE;
+                        end else if (msb_q > lsb_q) begin
+                            state_d = IDLE;
+                        end
+                    end
+                endcase
             end
 
             COMPUTE: begin
                 mul_valid = 1'b0;
                 case (opcode_q)
                     OPCODE_ECHO: begin
-                        result_d = 32'b0;
-                        for (int i = 0; i < lsb_q; i++) begin
-                            result_d[i * 8 +: 8] = operand_q[i];
+                        for (int i = 0; i < 16; i++) begin
+                            if (i < lsb_q) begin
+                                result_d[i * 8 +: 8] = operand_q[i];
+                            end
                         end
                         state_d = TRANSMIT;
                     end
@@ -185,14 +182,14 @@ bsg_imul_iterative #(.width_p(32)) mul_inst (
             end
 
             TRANSMIT: begin
-                tx_data_o = result_q[7:0];
                 tx_valid_o = 1'b1;
+                tx_data_o = result_q[7:0];
                 result_d = result_q >> 8;
-                if (result_q == 0) begin
-                    state_d = RECEIVE;
+                if (result_q == '0) begin
+                    tx_valid_o = 1'b0;
+                    state_d = IDLE;
                 end
             end
         endcase
     end
-
 endmodule

@@ -25,6 +25,12 @@ module uart_tb;
         uart_runner.send_uart_packet(8'hec, 8'h00, 8'h02, 8'h00, echo_payload);
         #1000000;
 
+         // ADD: [160, 0, 8, 0, 2, 0, 0, 0, 3, 0, 0, 0]
+        add_payload = '{default: 8'h00};
+        add_payload[0] = 8'h02; add_payload[4] = 8'h03; // Operands 2 and 3
+        uart_runner.send_uart_packet(8'ha0, 8'h00, 8'h08, 8'h00, add_payload);
+        #1000000;
+
         // MUL: [161, 0, 8, 0, 4, 0, 0, 0, 6, 0, 0, 0]
         mul_payload = '{default: 8'h00};
         mul_payload[0] = 8'h04; mul_payload[4] = 8'h06; // Operands 4 and 6
@@ -37,9 +43,9 @@ module uart_tb;
         uart_runner.send_uart_packet(8'ha2, 8'h00, 8'h08, 8'h00, div_payload);
         #1000000;
 
-        // ADD: [160, 0, 8, 0, 2, 0, 0, 0, 3, 0, 0, 0]
+         // ADD: [160, 0, 8, 0, 2, 0, 0, 0, 3, 0, 0, 0]
         add_payload = '{default: 8'h00};
-        add_payload[0] = 8'h02; add_payload[4] = 8'h03; // Operands 2 and 3
+        add_payload[0] = 8'h02; add_payload[4] = 8'h10; // Operands 2 and 3
         uart_runner.send_uart_packet(8'ha0, 8'h00, 8'h08, 8'h00, add_payload);
         #1000000;
 

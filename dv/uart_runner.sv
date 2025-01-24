@@ -12,7 +12,7 @@ module uart_runner;
     wire tx_ready;     // Changed to wire
     wire [7:0] rx_data; // Changed to wire
 
-    localparam realtime ClockPeriod = 33.0;
+    localparam realtime ClockPeriod = 62.5;
 
     initial begin
         clk_i = 0;
@@ -29,11 +29,11 @@ module uart_runner;
         .txd_o(txd_o)
     );
 
-task automatic reset;
-    rst_i <= 0;
-    @(posedge clk_i);
-    rst_i <= 1;
-endtask
+    task automatic reset;
+        rst_i <= 0;
+        @(posedge clk_i);
+        rst_i <= 1;
+    endtask
 
     task send_uart_byte(input logic [7:0] uart_byte);
         integer i;
@@ -93,6 +93,5 @@ endtask
 
         end
     endtask
-
 
 endmodule

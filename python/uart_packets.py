@@ -2,8 +2,8 @@
 import serial
 import threading
 import sys
-import time
 
+# Define opcodes
 OPCODE_ECHO = 0xEC
 OPCODE_ADD32 = 0xA0
 OPCODE_MUL32 = 0xA1
@@ -15,34 +15,11 @@ def parse_rx_packet(packet):
     payload = packet[4:]
     print(f"Received Packet - Opcode: {opcode}, Length: {length}, Payload: {payload}")
 
-    if opcode == OPCODE_ADD32:
-        result = int.from_bytes(payload[:length], 'little', signed=True)
-        print(f"Addition Result: {result}")
-    elif opcode == OPCODE_MUL32:
-        result = int.from_bytes(payload[:4], 'little', signed=True)
-        print(f"Multiplication Result: {result}")
-
 def read_thread(ser):
-    buffer = bytearray()
     while True:
-        data = ser.read(ser.in_waiting or 1)
-        if data:
-            buffer.extend(data)
-            print(f"RX (raw bytes): {list(data)}")  # Print raw RX data continuously
-            print(f"RX raw data buffer: {list(buffer)}")  # Print the full buffer
-
-            while len(buffer) >= 4:
-                length_lsb = buffer[1]
-                length_msb = buffer[2]
-                total_length = 4 + ((length_msb << 8) | length_lsb)
-
-                if len(buffer) >= total_length + 4:
-                    packet = buffer[:total_length + 4]
-                    buffer = buffer[total_length + 4:]
-                    print(f"Debug: Parsed Packet: {list(packet)}")
-                    parse_rx_packet(packet)
-                else:
-                    break
+        line = ser.readline()
+        if line:
+            print("RX:", line)
 
 def build_packet(opcode, payload):
     reserved = 0x00
@@ -92,46 +69,64 @@ def main():
     if len(sys.argv) > 1:
         port = sys.argv[1]
     else:
-        port = "/dev/ttyUSB2"
+        port = "/dev/ttyUSB1"
 
-    ser = serial.Serial(port=port, baudrate=115200, timeout=1)
-
+    ser = serial.Serial(port=port, baudrate=115200, timeout=0)
     t = threading.Thread(target=read_thread, args=(ser,), daemon=True)
     t.start()
 
     print(f"Opened {port} at 115200 baud.")
     print("Commands: 'echo <text>', 'add <vals>', 'mul <vals>', 'div <n> <d>', or 'quit'")
 
-    while True:
-        user_in = input("> ")
-        if not user_in.strip():
-            continue
-        tokens = user_in.split()
-        cmd = tokens[0].lower()
-
-        if cmd == "quit":
-            break
-        elif cmd == "echo":
-            message = " ".join(tokens[1:])
-            echo(ser, message)
-        elif cmd == "add":
-            ops = [int(x) for x in tokens[1:]]
-            add32(ser, ops)
-        elif cmd == "mul":
-            ops = [int(x) for x in tokens[1:]]
-            mul32(ser, ops)
-        elif cmd == "div":
-            if len(tokens) < 3:
-                print("Usage: div <numerator> <denominator>")
+    try:
+        while True:
+            user_in = input("> ")
+            if not user_in.strip():
                 continue
-            numerator = int(tokens[1])
-            denominator = int(tokens[2])
-            div32(ser, numerator, denominator)
-        else:
-            print("Unknown command. Try: echo, add, mul, div, or quit.")
+            tokens = user_in.split()
+            cmd = tokens[0].lower()
 
-    ser.close()
-    print("Port closed.")
+            if cmd == "quit":
+                break
+            elif cmd == "echo":
+                message = " ".join(tokens[1:])
+                echo(ser, message)
+            elif cmd == "add":
+                if len(tokens) < 3:
+                    print("Usage: add <val1> <val2> ...")
+                    continue
+                try:
+                    ops = [int(x) for x in tokens[1:]]
+                except ValueError:
+                    print("Operands must be integers.")
+                    continue
+                add32(ser, ops)
+            elif cmd == "mul":
+                if len(tokens) < 3:
+                    print("Usage: mul <val1> <val2> ...")
+                    continue
+                try:
+                    ops = [int(x) for x in tokens[1:]]
+                except ValueError:
+                    print("Operands must be integers.")
+                    continue
+                mul32(ser, ops)
+            elif cmd == "div":
+                if len(tokens) < 3:
+                    print("Usage: div <numerator> <denominator>")
+                    continue
+                try:
+                    numerator = int(tokens[1])
+                    denominator = int(tokens[2])
+                except ValueError:
+                    print("Numerator and denominator must be integers.")
+                    continue
+                div32(ser, numerator, denominator)
+            else:
+                print("Unknown command. Try: echo, add, mul, div, or quit.")
+    finally:
+        ser.close()
+        print("Port closed.")
 
 if __name__ == "__main__":
     main()

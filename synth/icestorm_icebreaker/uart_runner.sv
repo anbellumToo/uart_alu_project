@@ -18,7 +18,7 @@ module uart_runner;
     initial begin
         pll_out = 0;
         forever begin
-            #16.660ns; // 50 MHz
+            #31.25ns; // 50 MHz
             pll_out = !pll_out;
         end
     end

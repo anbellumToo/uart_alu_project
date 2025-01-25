@@ -3,7 +3,6 @@ import serial
 import threading
 import sys
 
-# Define opcodes
 OPCODE_ECHO = 0xEC
 OPCODE_ADD32 = 0xA0
 OPCODE_MUL32 = 0xA1
@@ -17,22 +16,47 @@ def parse_rx_packet(packet):
 
 def read_thread(ser):
     while True:
-        line = ser.readline()
-        if line:
-            print("RX:", line)
+        if ser.in_waiting:
+            data = ser.read(ser.in_waiting)
+            if data:
+                print("RX bytes:", list(data))
+                print("RX hex  :", ' '.join(f'{byte:02X}' for byte in data))
+
+                try:
+                    ascii_str = data.decode('ascii')
+                    print("RX ASCII :", ascii_str)
+                except UnicodeDecodeError:
+                    print("RX ASCII :", "<Non-ASCII Data>")
+
+                if len(data) == 8:
+                    remainder = int.from_bytes(data[:4], 'little', signed=True)
+                    quotient = int.from_bytes(data[4:], 'little', signed=True)
+                    print(f"RX Division - Quotient: {quotient}, Remainder: {remainder}")
+                elif len(data) == 4:
+                    result = int.from_bytes(data, 'little', signed=True)
+                    print(f"RX Int   : {result}")
+                elif len(data) > 4:
+                    try:
+                        ascii_str = data.decode('ascii')
+                        print("RX Multi ASCII :", ascii_str)
+                    except UnicodeDecodeError:
+                        print("RX Multi ASCII :", "<Non-ASCII Data>")
+        else:
+            pass
+
 
 def build_packet(opcode, payload):
     reserved = 0x00
-    data_length = len(payload)  # Length of the data payload
+    data_length = len(payload)
     length_lsb = data_length & 0xFF
     length_msb = (data_length >> 8) & 0xFF
 
     packet = bytearray()
-    packet.append(opcode)       # Opcode
-    packet.append(reserved)     # Reserved
-    packet.append(length_lsb)   # Length (LSB)
-    packet.append(length_msb)   # Length (MSB)
-    packet.extend(payload)      # Data payload
+    packet.append(opcode)
+    packet.append(reserved)
+    packet.append(length_lsb)
+    packet.append(length_msb)
+    packet.extend(payload)
     return packet
 
 def echo(ser, message):

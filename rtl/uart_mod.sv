@@ -1,7 +1,7 @@
 module uart_mod
   #(parameter DATA_WIDTH_P  = 8,
     parameter PRESCALE_P    = 16'd17,
-    parameter FIFO_DEPTH_LOG2_P = 4 // Adjust the depth as needed
+    parameter FIFO_DEPTH_LOG2_P = 4
   )
   (
     input  wire              clk_i,
@@ -14,15 +14,14 @@ module uart_mod
   wire [DATA_WIDTH_P-1:0]  rx_data;
   wire                     rx_ready;
 
-  wire                     tx_valid_fifo; // FIFO valid output
-  wire [DATA_WIDTH_P-1:0]  tx_data_fifo;  // FIFO data output
-  wire                     tx_ready_fifo; // FIFO ready input
+  wire                     tx_valid_fifo;
+  wire [DATA_WIDTH_P-1:0]  tx_data_fifo;
+  wire                     tx_ready_fifo;
 
-  wire                     tx_valid;     // To uart_tx
-  wire [DATA_WIDTH_P-1:0]  tx_data;      // To uart_tx
-  wire                     tx_ready;     // From uart_tx
+  wire                     tx_valid;
+  wire [DATA_WIDTH_P-1:0]  tx_data;
+  wire                     tx_ready;
 
-  // UART RX instance
   uart_rx #(
     .DATA_WIDTH(DATA_WIDTH_P)
   ) rx_inst (
@@ -38,7 +37,6 @@ module uart_mod
     .frame_error   ()
   );
 
-  // FIFO instance for TX data
   fifo_1r1w #(
     .width_p(DATA_WIDTH_P),
     .depth_log2_p(FIFO_DEPTH_LOG2_P)
@@ -53,7 +51,6 @@ module uart_mod
     .valid_o       (tx_valid_fifo)
   );
 
-  // UART TX instance
   uart_tx #(
     .DATA_WIDTH(DATA_WIDTH_P)
   ) tx_inst (
@@ -73,8 +70,8 @@ module uart_mod
     .rx_valid_i    (rx_valid),
     .rx_data_i     (rx_data),
     .tx_data_o     (tx_data),
-    .tx_ready      (tx_ready_fifo), // Connect to FIFO ready signal
-    .tx_valid_o    (tx_valid)       // Connect to FIFO valid input
+    .tx_ready      (tx_ready_fifo),
+    .tx_valid_o    (tx_valid)
   );
 
 endmodule

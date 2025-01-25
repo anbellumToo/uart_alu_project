@@ -34,22 +34,14 @@ logic [7:0] msb_d, msb_q;
 logic [7:0] opcode_d, opcode_q;
 logic [7:0] rx_data_prev;
 
-// New registers for multi-byte transmission
-logic [127:0] tx_buffer_d, tx_buffer_q; // Supports up to 16 bytes
+logic [127:0] tx_buffer_d, tx_buffer_q;
 logic [7:0] tx_byte_count_d, tx_byte_count_q;
 logic [7:0] tx_index_d, tx_index_q;
 
-logic mul_valid, div_valid, add_valid;
-logic mul_ready, div_ready, add_ready;
+logic mul_valid, div_valid;
+logic mul_ready, div_ready;
 
-logic [31:0] add_result;
-logic [31:0] mul_result, div_quotient, div_remainder;
-
-// adder add_inst (
-//     .a_i(operand1_q),
-//     .b_i(operand2_q),
-//     .sum_o(add_result)
-// );
+logic [31:0] add_result, mul_result, div_quotient, div_remainder;
 
 bsg_imul_iterative #(.width_p(32)) mul_inst (
     .clk_i(clk_i),
@@ -66,7 +58,36 @@ bsg_imul_iterative #(.width_p(32)) mul_inst (
     .yumi_i(1'b1)
 );
 
-// Sequential logic for state and data registers
+simple_divider #(
+    .WIDTH(32)
+) div_inst (
+    .clk_i(clk_i),
+    .rst_i(rst_i),
+    .start_i(div_valid),
+    .dividend_i(operand1_q),
+    .divisor_i(operand2_q),
+    .quotient_o(div_quotient),
+    .remainder_o(div_remainder),
+    .ready_o(div_ready)
+);
+
+// bsg_idiv_iterative #(
+//     .width_p(32),
+//     .bits_per_iter_p(1)
+// ) div_inst (
+//     .clk_i(clk_i),
+//     .reset_i(rst_i),
+//     .v_i(div_valid),
+//     .ready_and_o(),
+//     .dividend_i(operand1_q),
+//     .divisor_i(operand2_q),
+//     .signed_div_i(1'b0),
+//     .v_o(div_ready),
+//     .quotient_o(div_quotient),
+//     .remainder_o(div_remainder),
+//     .yumi_i(1'b1)
+// );
+
 always_ff @(posedge clk_i or posedge rst_i) begin
     if (rst_i) begin
         for (int i = 0; i < 16; i++) begin
@@ -103,7 +124,6 @@ always_ff @(posedge clk_i or posedge rst_i) begin
     end
 end
 
-// Byte count logic
 always_ff @(negedge clk_i) begin
     if (rst_i) begin
         byte_count_d <= 8'b0;
@@ -114,9 +134,7 @@ always_ff @(negedge clk_i) begin
     end
 end
 
-// Combinational logic for state transitions and data handling
 always_comb begin
-    // Default assignments
     tx_data_o = 8'b0;
     tx_valid_o = 1'b0;
     mul_valid = 1'b0;
@@ -124,8 +142,8 @@ always_comb begin
     add_valid = 1'b0;
     state_d = state_q;
 
-    operand1_d = {operand_q[3], operand_q[2], operand_q[1], operand_q[0]}; // Concatenate for 32-bit operand1
-    operand2_d = {operand_q[7], operand_q[6], operand_q[5], operand_q[4]}; // Concatenate for 32-bit operand2
+    operand1_d = {operand_q[3], operand_q[2], operand_q[1], operand_q[0]};
+    operand2_d = {operand_q[7], operand_q[6], operand_q[5], operand_q[4]};
     result_d = result_q;
     lsb_d = lsb_q;
     msb_d = msb_q;
@@ -174,7 +192,6 @@ always_comb begin
             mul_valid = 1'b0;
             case (opcode_q)
                 OPCODE_ECHO: begin
-                    // Load echo data into tx_buffer
                     tx_buffer_d = 128'b0;
                     for (int i = 0; i < 16; i++) begin
                         if (i < lsb_q) begin
@@ -195,24 +212,28 @@ always_comb begin
                 end
                 OPCODE_MUL32: begin
                     mul_valid = 1'b1;
-
                     if (mul_ready) begin
                         tx_buffer_d = {mul_result[31:24], mul_result[23:16], mul_result[15:8], mul_result[7:0]};
                         tx_byte_count_d = 4;
                         tx_index_d = 0;
                         state_d = TRANSMIT;
                     end else begin
-                        state_d = COMPUTE; // Wait until multiplication is ready
+                        state_d = COMPUTE;
                     end
                 end
                 OPCODE_DIV32: begin
-                    // For now, using hardcoded value, adjust as needed
-                    tx_buffer_d = {8'd0, 8'd5}; // Example: sending 2 bytes
-                    tx_byte_count_d = 2;
-                    tx_index_d = 0;
-                    state_d = TRANSMIT;
+                    div_valid = 1'b1;
+                    if (div_ready) begin
+                        tx_buffer_d = {div_quotient[31:24], div_quotient[23:16], div_quotient[15:8], div_quotient[7:0],
+                                       div_remainder[31:24], div_remainder[23:16], div_remainder[15:8], div_remainder[7:0]};
+                        tx_byte_count_d = 8;
+                        tx_index_d = 0;
+                        state_d = TRANSMIT;
+                    end else begin
+                        state_d = COMPUTE;
+                    end
                 end
-                default: begin
+                 default: begin
                     state_d = IDLE;
                 end
             endcase

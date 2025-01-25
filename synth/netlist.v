@@ -13,7 +13,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   input rxd_i;
   wire rxd_i;
   wire rxd_i_SB_LUT4_I3_O;
-  wire [3:0] rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q;
+  wire [1:0] rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q;
   output txd_o;
   wire txd_o;
   wire txd_o_SB_LUT4_O_I3;
@@ -21,8 +21,44 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire [1:0] txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3;
   wire [2:0] txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O;
   wire [2:0] txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O;
-  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3;
   wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1;
+  wire txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_I1;
   wire \uart_inst.clk_i ;
   wire \uart_inst.reset_inv ;
   wire \uart_inst.reset_inv_SB_DFF_Q_D ;
@@ -33,324 +69,93 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.txd_o ;
   wire \uart_inst.uart_mod_inst.clk_i ;
   wire [32:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.carry ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].c_out ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CI ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].g ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].c_out ;
-  wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].g ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].c_out ;
-  wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].g ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].c_out ;
-  wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CI ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].g ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].c_out ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CI ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].g ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].c_out ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].g ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].c_out ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CI ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].g ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].c_out ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CO ;
   wire \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CYINIT ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.DI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].g ;
-  wire [32:0] \uart_inst.uart_mod_inst.parser_inst.add_inst.sum_o ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.add_result ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I3 ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O ;
   wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q ;
-  wire \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q ;
   wire \uart_inst.uart_mod_inst.parser_inst.clk_i ;
   wire \uart_inst.uart_mod_inst.parser_inst.div_valid ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.lsb_d ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.msb_d ;
-  wire [32:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.adder_result ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.clk_i ;
   wire [5:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r ;
+  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_1_D ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_2_D ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_3_D ;
+  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3 ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.gets_high_part_i ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.gets_high_part_r ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.need_neg_result_r ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_11_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_17_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_1_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_23_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_26_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_27_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_28_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_29_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_2_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_30_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_31_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_3_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_4_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_5_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_6_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_7_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_8_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_10_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_11_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_12_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_13_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_14_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_15_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_16_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_17_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_18_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_19_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_1_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_20_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_21_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_22_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_23_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_24_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_25_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_26_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_2_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_31_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_3_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_4_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_5_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_6_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_7_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_8_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_9_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_D ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0_O ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.reset_i ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_o ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R ;
   wire [5:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_1_D ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ;
@@ -363,213 +168,79 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_D ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R ;
+  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R ;
   wire [32:0] \uart_inst.uart_mod_inst.parser_inst.mul_inst.shifted_adder_result ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA_i ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA_r ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB_i ;
-  wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB_r ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_inst.yumi_i ;
   wire \uart_inst.uart_mod_inst.parser_inst.mul_ready ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.mul_result ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.opcode_d ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.operand1_d ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.operand2_d ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[0] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[1] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[2] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[3] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[4] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[5] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[6] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_d[7] ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[0] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[1] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[2] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[3] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[4] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[5] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[6] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q ;
-  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.operand_q[7] ;
-  wire \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ;
-  wire [31:0] \uart_inst.uart_mod_inst.parser_inst.result_d ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I2_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 ;
   wire \uart_inst.uart_mod_inst.parser_inst.rst_i ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.rx_data_i ;
   wire [7:0] \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
   wire \uart_inst.uart_mod_inst.parser_inst.rx_valid_i ;
   wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d ;
   wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
   wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 ;
+  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1_CO ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 ;
+  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
   wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 ;
+  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 ;
+  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 ;
+  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 ;
+  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I3 ;
   wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O ;
-  wire [1:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ;
-  wire \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 ;
+  wire [7:0] \uart_inst.uart_mod_inst.parser_inst.tx_data_o ;
+  wire \uart_inst.uart_mod_inst.parser_inst.tx_valid_o ;
   wire \uart_inst.uart_mod_inst.rst_i ;
   wire [7:0] \uart_inst.uart_mod_inst.rx_data ;
   wire [3:0] \uart_inst.uart_mod_inst.rx_inst.bit_cnt ;
@@ -622,17 +293,20 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.rx_inst.clk ;
   wire [7:0] \uart_inst.uart_mod_inst.rx_inst.data_reg ;
   wire \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_D ;
-  wire \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ;
-  wire [3:0] \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R ;
   wire [7:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata ;
   wire [7:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg ;
-  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ;
-  wire [2:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 ;
-  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tready ;
   wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid ;
   wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
+  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D ;
+  wire [3:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ;
+  wire [1:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
+  wire [2:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O ;
+  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ;
+  wire \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ;
+  wire [2:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 ;
+  wire [2:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ;
+  wire [1:0] \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 ;
   wire [15:0] \uart_inst.uart_mod_inst.rx_inst.prescale ;
   wire [18:0] \uart_inst.uart_mod_inst.rx_inst.prescale_reg ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_10_D ;
@@ -649,9 +323,9 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
+  wire [3:0] \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0 ;
-  wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D ;
   wire [2:0] \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 ;
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_18_D ;
@@ -677,26 +351,23 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.rx_inst.rst ;
   wire \uart_inst.uart_mod_inst.rx_inst.rxd ;
-  wire \uart_inst.uart_mod_inst.rx_ready ;
   wire \uart_inst.uart_mod_inst.rx_valid ;
   wire \uart_inst.uart_mod_inst.rxd_i ;
+  wire [7:0] \uart_inst.uart_mod_inst.tx_data ;
   wire \uart_inst.uart_mod_inst.tx_fifo.clk_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.clk_i ;
-  wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_n ;
   wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_o ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.down_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.reset_i ;
-  wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_n ;
   wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_4_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_wr.clk_i ;
   wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.counter_wr.count_o ;
@@ -711,116 +382,16 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_4_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_D ;
   wire \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ;
+  wire [7:0] \uart_inst.uart_mod_inst.tx_fifo.data_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.clk_i ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_LUT4_I0_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_LUT4_I0_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_LUT4_I0_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_LUT4_I0_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_LUT4_I0_O ;
-  wire [15:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_LUT4_I0_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0_O ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_DFF_Q_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_2 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_4 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_5 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_6 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_7 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.rd_addr_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.rd_valid_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.inst_ram.reset_i ;
   wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.wr_addr_i ;
-  wire [7:0] \uart_inst.uart_mod_inst.tx_fifo.last_data_in ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_I3 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_I3 ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 ;
-  wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.last_write_addr ;
-  wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.next_read ;
+  wire [7:0] \uart_inst.uart_mod_inst.tx_fifo.inst_ram.wr_data_i ;
   wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.read_ptr ;
-  wire \uart_inst.uart_mod_inst.tx_fifo.ready_i ;
   wire \uart_inst.uart_mod_inst.tx_fifo.reset_i ;
+  wire \uart_inst.uart_mod_inst.tx_fifo.valid_i ;
   wire [4:0] \uart_inst.uart_mod_inst.tx_fifo.write_ptr ;
   wire [3:0] \uart_inst.uart_mod_inst.tx_inst.bit_cnt ;
   wire \uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q_1_D ;
@@ -832,22 +403,10 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.tx_inst.clk ;
   wire [8:0] \uart_inst.uart_mod_inst.tx_inst.data_reg ;
   wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D ;
+  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 ;
+  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ;
+  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ;
   wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O_I3 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ;
   wire [15:0] \uart_inst.uart_mod_inst.tx_inst.prescale ;
   wire [18:0] \uart_inst.uart_mod_inst.tx_inst.prescale_reg ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_10_D ;
@@ -864,8 +423,9 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire [2:0] \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D ;
+  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 ;
+  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_18_D ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ;
@@ -886,56 +446,13 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9_D ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ;
-  wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_I1 ;
   wire \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
   wire \uart_inst.uart_mod_inst.tx_inst.rst ;
-  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tready ;
-  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ;
-  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_DFFESR_Q_E ;
-  wire [1:0] \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3 ;
-  wire [2:0] \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O ;
-  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ;
-  wire [3:0] \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O ;
-  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_O_I3 ;
+  wire [7:0] \uart_inst.uart_mod_inst.tx_inst.s_axis_tdata ;
+  wire \uart_inst.uart_mod_inst.tx_inst.s_axis_tvalid ;
   wire \uart_inst.uart_mod_inst.tx_inst.txd ;
   wire \uart_inst.uart_mod_inst.tx_inst.txd_reg ;
-  wire \uart_inst.uart_mod_inst.tx_ready ;
+  wire \uart_inst.uart_mod_inst.tx_valid ;
   wire \uart_inst.uart_mod_inst.txd_o ;
   SB_LUT4 #(
     .LUT_INIT(16'h00ff)
@@ -975,22 +492,13 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0f00)
-  ) rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q_SB_LUT4_I2 (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
-    .I3(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
-    .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2])
-  );
-  SB_LUT4 #(
     .LUT_INIT(16'hccc0)
   ) rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q_SB_LUT4_O (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [3]),
     .I2(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [1]),
-    .O(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2])
+    .O(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h00ff)
@@ -1033,31 +541,16 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I1(1'h0),
     .I2(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [0]),
     .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3[1]),
-    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0003)
-  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I1 (
-    .I0(1'h0),
-    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
-    .I2(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E )
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
   ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
+    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
     .I2(1'h1),
-    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
     .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[0])
-  );
-  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
-    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3),
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
-    .I1(1'h1)
   );
   SB_LUT4 #(
     .LUT_INIT(16'h0003)
@@ -1067,6 +560,294 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I2(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [2]),
     .I3(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [1]),
     .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3[1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hcfcc)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
+    .I2(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1]),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_CARRY txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO (
+    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .CO(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI),
+    .I0(1'h0),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [3]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [4]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [5]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [6]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [7]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [8]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [9]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [10]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [11]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [12]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [13]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [14]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [15]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [16]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [17]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_O (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [18]),
+    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_I1)
   );
   SB_DFF \uart_inst.reset_inv_SB_DFF_Q  (
     .C(clk_16),
@@ -1111,7 +892,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D )
   );
@@ -1120,7 +901,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3 [2])
   );
@@ -1136,7 +917,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D )
   );
@@ -1145,15 +926,91 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3 [2])
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [5]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9669)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3_SB_CARRY_CI  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 [1]),
+    .I1(1'h1)
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [7]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0ff0)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [1])
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 [1]),
+    .I1(1'h1)
   );
   SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2])
   );
   SB_DFFNESR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3  (
     .C(clk_16),
@@ -1167,7 +1024,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D )
   );
@@ -1176,15 +1033,60 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3 [2])
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [4]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'ha2f3)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00f0)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I1 ),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I1_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I1 ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 [1]),
+    .I1(1'h1)
   );
   SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2])
   );
   SB_DFFNESR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4  (
     .C(clk_16),
@@ -1198,7 +1100,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D )
   );
@@ -1207,15 +1109,30 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3 [2])
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [3]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8241)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [0])
   );
   SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2])
   );
   SB_DFFNESR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5  (
     .C(clk_16),
@@ -1230,7 +1147,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
     .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D )
   );
   SB_LUT4 #(
@@ -1238,15 +1155,21 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [1])
   );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [2]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
+    .R(\uart_inst.reset_sync )
+  );
   SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2])
   );
   SB_DFFNESR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6  (
     .C(clk_16),
@@ -1261,7 +1184,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
     .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D )
   );
   SB_LUT4 #(
@@ -1269,8 +1192,8 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 [1])
   );
   SB_DFFNESR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7  (
@@ -1285,16 +1208,22 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D )
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [0]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h0880)
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O  (
     .I0(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [0]),
     .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D )
   );
@@ -1302,97 +1231,64 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3 ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2])
   );
   SB_CARRY \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2])
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [6]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8a45)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3 [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0020)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I2_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8400)
+  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O_SB_LUT4_O_1  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'hfcff)
   ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_E_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
+    .I2(\uart_inst.reset_sync ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_E )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [3])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1000)
-  ) \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .R(\uart_inst.reset_sync )
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q  (
     .C(clk_16),
@@ -1401,8 +1297,17 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_1  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [0]),
+    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_1_D ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [4])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0f00)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_1_D_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.reset_sync ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_1_D )
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_2  (
     .C(clk_16),
@@ -1415,7 +1320,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(1'h0),
     .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [3]),
     .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_2_D )
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_3  (
@@ -1434,8 +1339,44 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [2]),
+    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h3000)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h030f)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_I3  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0300)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0002)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [5]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [4]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [3]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h000f)
@@ -1443,1500 +1384,8 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(1'h0),
     .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1050)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2  (
-    .I0(\uart_inst.reset_sync ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0100)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_1  (
-    .I0(\uart_inst.reset_sync ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [4]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_2  (
-    .I0(1'h0),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0f03)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0300)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0002)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [5]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [31]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [30]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [21]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [20]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_11  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_11_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [20]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_11_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [19]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_11_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [19]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [18]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [18]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [17]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [17]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [16]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [16]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [15]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [15]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [14]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_17  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_17_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [14]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_17_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [13]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_17_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [13]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [12]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [12]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [11]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [29]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_1_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [29]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [11]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [10]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [10]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [9]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [9]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [8]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_23  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_23_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [8]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_23_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_23_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_26  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_26_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_26_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_26_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_27  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_27_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_27_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_27_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_28  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_28_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_28_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_28_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_29  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_29_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_29_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_29_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [28]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_2_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [28]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_30  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_30_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_30_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_30_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_31  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_31_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_31_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_31_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_3_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [27]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_3_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [27]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_4_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [26]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_4_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [26]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_5_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [25]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_5_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [25]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_6_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [24]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_6_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [24]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_7_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [23]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_7_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_8  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [23]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_8_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [22]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_8_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [22]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [21]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [30]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [31]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [30]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_10  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_10_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [21]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_10_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [22]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_10_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_11  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_11_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [20]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_11_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [21]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_11_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_12  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_12_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [19]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_12_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [20]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_12_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_13  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_13_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [18]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_13_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [19]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_13_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_14  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_14_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [17]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_14_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [18]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_14_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_15  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_15_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [16]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_15_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [17]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_15_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_16  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_16_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [15]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_16_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [16]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_16_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_17  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_17_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [14]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_17_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [15]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_17_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_18  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_18_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [13]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_18_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [14]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_18_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_19  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_19_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [12]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_19_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [13]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_19_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [31]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_1_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [29]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_20  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_20_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [11]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_20_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [12]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_20_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_21  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_21_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [10]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_21_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [11]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_21_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_22  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_22_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [9]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_22_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [10]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_22_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_23  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_23_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [8]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_23_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [9]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_23_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_24  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_24_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_24_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [8]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_24_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_25  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_25_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_25_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_25_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_26  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_26_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_26_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_26_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h080e)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [30]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_2_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [28]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h175f)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_31  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_31_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_31_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_31_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_3_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [29]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_3_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [27]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_4_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [28]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_4_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [26]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_5_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [27]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_5_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [25]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_6_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [26]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_6_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [24]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_7_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [25]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_7_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_8  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [23]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_8_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [24]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_8_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_9  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_9_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [22]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_9_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [23]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_9_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfff0)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_E )
   );
   SB_DFF \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q  (
     .C(clk_16),
@@ -2944,1640 +1393,90 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o )
   );
   SB_LUT4 #(
-    .LUT_INIT(16'hfafe)
+    .LUT_INIT(16'hfffc)
   ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O  (
-    .I0(\uart_inst.reset_sync ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
     .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [4]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D )
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0023)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
+    .LUT_INIT(16'h0ccc)
   ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [31]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [30]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [21]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [21]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [21]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [21]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [21]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [20]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [20]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [20]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [20]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [20]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [19]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [19]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [19]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [19]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [19]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [18]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [18]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [18]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [18]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [18]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [17]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [17]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [17]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [17]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [17]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [16]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [16]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [16]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [16]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [16]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [15]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [15]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [15]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [15]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [15]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [14]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [14]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [14]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [14]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [14]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [13]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [13]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [13]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [13]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [13]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [12]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [12]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [12]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [12]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [12]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [30]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [30]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [30]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [30]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [29]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [11]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [11]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [11]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [11]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [11]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [10]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [10]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [10]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [10]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [10]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [9]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [9]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [9]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [9]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [9]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [8]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [8]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [8]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [8]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [8]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [7]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [7]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [7]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [6]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [6]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [6]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [5]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [5]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [5]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [4]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [4]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [4]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [3]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [2]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [29]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [29]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [29]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [29]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [28]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [1]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1d2e)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [1]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8000)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h2202)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0_O [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h5051)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
     .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(1'h0),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [0]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [1])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [2]),
-    .I3(1'h0),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O  (
+    .LUT_INIT(16'h000f)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_O_1  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h12de)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [0]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [28]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [28]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [28]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [28]),
     .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [27]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [27]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [27]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [27]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [27]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [26]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [26]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [26]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [26]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [26]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [25]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [25]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [25]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [25]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [25]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [24]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [24]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [24]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [24]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [24]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [23]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [23]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [23]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [23]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [23]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [2])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D ),
-    .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [22]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [22]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [22]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [22]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [22]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h936c)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [31]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f30)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [31]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h353a)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [31]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [31]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [2])
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O [2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h0003)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2_SB_LUT4_O  (
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [2])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [4]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [2])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'hffc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfff0)
-  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [1])
+    .LUT_INIT(16'ha8aa)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [3])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [5]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_1_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [4]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -4599,7 +1498,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_2_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [3]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -4621,7 +1520,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_3_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [2]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -4643,7 +1542,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_4_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -4659,7 +1558,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .D(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_5_D ),
     .E(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0]),
-    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h00ff)
@@ -4686,2199 +1585,22 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [4])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'hfff0)
+    .LUT_INIT(16'hfffc)
   ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(1'h0),
+    .I1(\uart_inst.reset_sync ),
     .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0_O [2]),
     .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_E )
   );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [0]),
-    .R(\uart_inst.reset_sync )
-  );
   SB_LUT4 #(
-    .LUT_INIT(16'h0300)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[0]_SB_DFFER_Q_E )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[1]_SB_DFFER_Q_E )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0c00)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[2]_SB_DFFER_Q_E )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[3]_SB_DFFER_Q_E )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0300)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFER_Q_E )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [3])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[4] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFER_Q_E )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[5] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [3])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [3])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0c00)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFER_Q_E )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q_SB_LUT4_O_1  (
+    .LUT_INIT(16'hfff0)
+  ) \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R_SB_LUT4_O  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[6] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFER_Q_E )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFR_D  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFR_D_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFR_D_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFR_D_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.operand_q[7]_SB_DFFR_D_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff80)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff80)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [4])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [30])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [30]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h004c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h153f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6900)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [3])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf600)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I2_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [29])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [29]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [5]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [28])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [28]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [4]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [27])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [27]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [3]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [26])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [26]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [2]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2_SB_LUT4_O_1_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [25])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [25]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [1]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0e08)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [24])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [24]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0_SB_DFFR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[7] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [23])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h70b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [23]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [7]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'heee8)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [22])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [31]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [30]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [22]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6900)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [4]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff80)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [7])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [21])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [29]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [21]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [20])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [28]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [0]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O_SB_LUT4_O_2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [20]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h4c5f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h69a5)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [19])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [19]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [18])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf030)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [18]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1e78)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [17])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [17]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [16])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [16]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[2] [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [15])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf030)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [15]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1e78)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [14])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [14]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [13])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [13]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [7]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff80)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [10])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [11])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [11]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [0])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [8]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [10]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6090)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff80)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [12])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcc0c)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [12]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [4]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9060)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [2]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [9])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf030)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [9]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1e78)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [8])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf030)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [8]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[1] [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3cc3)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[5]_SB_DFFR_D_4_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [6])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcf00)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1e78)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [6]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [6]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h80b0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [5])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcf00)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3cc3)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[4]_SB_DFFR_D_1_Q [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [5]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [5]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0a8a)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d [31])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [31]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [7]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1e78)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 [3])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[3] [6]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcc0)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2_SB_LUT4_O_1_I0 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf00f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2 [2])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [11]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [10]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [9]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc0cc)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9600)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h135f)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [3]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc0fc)
-  ) \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [2])
+    .I2(\uart_inst.reset_sync ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0_O [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R )
   );
   SB_DFFER \uart_inst.uart_mod_inst.parser_inst.rx_data_prev_SB_DFFER_Q  (
     .C(clk_16),
@@ -6951,13 +1673,541 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0002)
+    .LUT_INIT(16'h5070)
   ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [3]),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3]),
     .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h2000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h1000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [1]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E_1  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E_2  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [1]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E_3  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E_4  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O_SB_DFFER_E_5  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [3]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0_SB_DFFR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.byte_count_d [1]),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0300)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0001)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O_I3 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h5551)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h1333)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h8ccc)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1 [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .I3(1'h1),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hc300)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_1  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hf000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2 [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2 [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9009)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2 [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9009)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2_SB_LUT4_O_1  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0_SB_LUT4_O_2_I2 [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(1'h1),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2])
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1]),
+    .I1(1'h1)
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_CARRY_CI  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 [1]),
+    .I1(1'h1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [2])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_1_I2 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I1(1'h1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 [1]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [3])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 [1])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CI  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1_SB_LUT4_O_I3 ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CI  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3 ),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 [1]),
+    .I1(1'h1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1])
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9009)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1_CO ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1  (
+    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1_CO ),
+    .CO(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I1_CO ),
+    .O(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 [1])
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_1_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00ff)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(1'h0),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
+  );
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_DFFER_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2]),
+    .R(\uart_inst.reset_sync )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00f0)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0f00)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q_SB_LUT4_I2_1  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [1])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h3c30)
@@ -6969,826 +2219,108 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .O(\uart_inst.uart_mod_inst.parser_inst.state_d [1])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h000f)
+    .LUT_INIT(16'h3323)
   ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [1]),
+    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [3]),
     .O(\uart_inst.uart_mod_inst.parser_inst.state_d [0])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0004)
+    .LUT_INIT(16'h0003)
   ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [1])
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [0])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0c00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I2  (
+    .LUT_INIT(16'h3330)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3])
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [3])
   );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1 ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1 ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_DFFER_E  (
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_DFFER_Q  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [15]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [0]),
+    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [0]),
     .R(\uart_inst.reset_sync )
   );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_DFFER_E_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [14]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_DFFER_E_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [13]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_DFFER_E_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [12]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1 ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h1),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [23]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [22]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [21]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [20]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [19]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [18]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [17]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_DFFER_E_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [16]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_2_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1 ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O_SB_DFFER_E  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [27]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O_SB_DFFER_E_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [26]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O_SB_DFFER_E_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [25]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O_SB_DFFER_E_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [24]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_3_O ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O [1])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .I1(1'h1)
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2 ),
-    .I1(1'h1)
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_DFFER_Q  (
+  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_DFFER_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
+    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_2_O ),
+    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [1]),
     .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h1),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .I3(1'h1),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 [2])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_DFFER_E_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0004)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h8000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [1])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0_SB_DFFER_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0_SB_DFFER_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0300)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_DFFER_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0004)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 [2])
-  );
-  SB_DFFR \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_DFFR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.operand_q[0] [0]),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000f)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h0f00)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_O  (
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h8ccc)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1 ),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0900)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [3]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1 ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(1'h1),
-    .CO(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [0]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .I3(1'h1),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [2])
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [0])
   );
   SB_LUT4 #(
     .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1  (
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I2  (
     .I0(1'h0),
     .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [3])
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [0]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [2])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h8241)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2 ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [1])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2 ),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3  (
+    .LUT_INIT(16'h3000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2 ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [1]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .R(\uart_inst.reset_sync )
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
+    .LUT_INIT(16'h0004)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [2])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .R(\uart_inst.reset_sync )
+    .LUT_INIT(16'h8000)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [2]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I3 [3]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2 [1])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h8421)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [1]),
-    .R(\uart_inst.reset_sync )
+    .LUT_INIT(16'h0040)
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [0]),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_O_I1 [1]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [3]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [0]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I3 [3])
   );
   SB_LUT4 #(
     .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E_SB_LUT4_O  (
+  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0_SB_DFFER_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I1 )
+    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [1]),
+    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [2]),
+    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [2])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q  (
     .C(clk_16),
@@ -7809,8 +2341,8 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O  (
     .I0(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
     .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [1]),
-    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
+    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D )
   );
   SB_LUT4 #(
@@ -7835,7 +2367,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
     .I2(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_2_D_SB_LUT4_O_I2 [1]),
-    .I3(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
+    .I3(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_2_D )
   );
   SB_LUT4 #(
@@ -7859,8 +2391,8 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_3_D_SB_LUT4_O  (
     .I0(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
     .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [0]),
-    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
+    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_3_D )
   );
   SB_LUT4 #(
@@ -7868,7 +2400,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_D_SB_LUT4_O  (
     .I0(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
     .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [3]),
-    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
+    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_D_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_D )
   );
@@ -7889,7 +2421,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O  (
     .I0(\uart_inst.reset_sync ),
     .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E )
   );
@@ -8172,70 +2704,61 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I3(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [18]),
     .O(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3_SB_CARRY_CO_I1 )
   );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [3]),
-    .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [2]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [1]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [0]),
-    .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
-  );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [7]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [7]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [6]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [6]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [5]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_3  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [5]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [4]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_4  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [4]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [3]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_5  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [3]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [2]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_6  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [2]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [1]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_7  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [1]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.data_reg [0]),
-    .R(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1])
+    .R(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h00ff)
@@ -8246,132 +2769,194 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I3(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
     .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_D )
   );
-  SB_LUT4 #(
-    .LUT_INIT(16'h1000)
-  ) \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O  (
-    .I0(\uart_inst.reset_sync ),
-    .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfcff)
-  ) \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0c0f)
-  ) \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
-    .O(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [2])
-  );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [7]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [7]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [6]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [6]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [5]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [5]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_3  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [4]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [4]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_4  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [3]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [3]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_5  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [2]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [2]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_6  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [1]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [1]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_7  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.data_reg [0]),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg [0]),
     .R(\uart_inst.reset_sync )
   );
+  SB_DFFSR \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D ),
+    .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
+    .R(\uart_inst.reset_sync )
+  );
   SB_LUT4 #(
-    .LUT_INIT(16'hbaaa)
-  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O  (
-    .I0(\uart_inst.reset_sync ),
-    .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [1]),
+    .LUT_INIT(16'heca0)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 [1]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E )
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hfccc)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 [1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_I2_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0f00)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [1]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h00cf)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3  (
+    .I0(1'h0),
+    .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [1]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O [1])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hfcff)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h1000)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1  (
+    .I0(\uart_inst.reset_sync ),
+    .I1(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O [1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_1_O )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h0100)
-  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_O  (
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O  (
     .I0(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [3]),
     .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [2]),
     .I2(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [1]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [0]),
-    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [1])
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [1])
   );
-  SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(1'h1),
-    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .R(\uart_inst.reset_sync )
+  SB_LUT4 #(
+    .LUT_INIT(16'hf0fc)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_I3  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
+    .I2(\uart_inst.reset_sync ),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2]),
+    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h3c00)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4]),
+    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hf000)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 [0]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 [1]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9009)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O  (
+    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [2]),
+    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
+    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [1]),
+    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h9009)
+  ) \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1  (
+    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3]),
+    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
+    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [0]),
+    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 [1])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [18]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [17]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_10  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_10_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [8]),
     .R(\uart_inst.reset_sync )
   );
@@ -8393,16 +2978,16 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [7]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h05cc)
   ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
+    .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
     .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D )
   );
@@ -8424,7 +3009,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [6]),
     .R(\uart_inst.reset_sync )
   );
@@ -8432,7 +3017,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .LUT_INIT(16'hccf0)
   ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
     .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D )
@@ -8449,7 +3034,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_13  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_13_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [5]),
     .R(\uart_inst.reset_sync )
   );
@@ -8477,7 +3062,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_14  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_14_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [4]),
     .R(\uart_inst.reset_sync )
   );
@@ -8499,7 +3084,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [3]),
     .R(\uart_inst.reset_sync )
   );
@@ -8513,46 +3098,64 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D )
   );
   SB_CARRY \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O_I3 ),
+    .CI(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
     .CO(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ),
     .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [2]),
     .I1(1'h1)
   );
+  SB_CARRY \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [0]),
+    .CO(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
+    .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [1]),
+    .I1(1'h1)
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [2]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
+    .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [0])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0f00)
+  ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0]),
+    .I3(rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2])
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0001)
+  ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_1  (
+    .I0(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [3]),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [2]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [1]),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt [0]),
+    .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1])
+  );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [2]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h03aa)
   ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2]),
+    .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [0]),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [2]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0 [0])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [0]),
-    .CO(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [1]),
-    .I1(1'h1)
   );
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [1]),
     .R(\uart_inst.reset_sync )
   );
@@ -8561,7 +3164,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D )
   );
@@ -8577,7 +3180,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_18  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_18_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [0]),
     .R(\uart_inst.reset_sync )
   );
@@ -8585,8 +3188,8 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .LUT_INIT(16'h0355)
   ) \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_18_D_SB_LUT4_O  (
     .I0(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [0]),
-    .I1(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1]),
-    .I2(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2]),
+    .I1(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1]),
+    .I2(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2]),
     .I3(\uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_18_D )
   );
@@ -8608,7 +3211,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [16]),
     .R(\uart_inst.reset_sync )
   );
@@ -8630,7 +3233,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_3  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [15]),
     .R(\uart_inst.reset_sync )
   );
@@ -8652,7 +3255,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_4  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [14]),
     .R(\uart_inst.reset_sync )
   );
@@ -8674,7 +3277,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_5  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [13]),
     .R(\uart_inst.reset_sync )
   );
@@ -8696,7 +3299,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_6  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [12]),
     .R(\uart_inst.reset_sync )
   );
@@ -8718,7 +3321,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_7  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [11]),
     .R(\uart_inst.reset_sync )
   );
@@ -8740,7 +3343,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_8  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [10]),
     .R(\uart_inst.reset_sync )
   );
@@ -8762,7 +3365,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_9  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_9_D ),
-    .E(\uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.rx_inst.prescale_reg [9]),
     .R(\uart_inst.reset_sync )
   );
@@ -8805,44 +3408,32 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [2]),
+    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D ),
     .E(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
     .R(\uart_inst.reset_sync )
   );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(1'h0),
+    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
+    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D )
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
+    .CO(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2])
+  );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D [2]),
+    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D ),
     .E(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
     .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h2230)
-  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [2])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -8851,7 +3442,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I1(1'h0),
     .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
     .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D [2])
+    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D )
   );
   SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_O_I3_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
@@ -8861,19 +3452,10 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3  (
     .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D [2]),
+    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D ),
     .E(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
     .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h2230)
-  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [1])
   );
   SB_LUT4 #(
     .LUT_INIT(16'h6996)
@@ -8882,7 +3464,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I1(1'h0),
     .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
     .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D [2])
+    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_4  (
     .C(clk_16),
@@ -8910,34 +3492,31 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D )
   );
   SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
+    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3 ),
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3])
   );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
+  SB_LUT4 #(
+    .LUT_INIT(16'hf0ff)
+  ) \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1])
+    .I1(1'h0),
+    .I2(\uart_inst.reset_sync ),
+    .I3(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 [2]),
+    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
+    .E(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
+    .E(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3]),
     .R(\uart_inst.reset_sync )
   );
@@ -8959,7 +3538,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
+    .E(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [2]),
     .R(\uart_inst.reset_sync )
   );
@@ -8981,7 +3560,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_3  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
+    .E(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [1]),
     .R(\uart_inst.reset_sync )
   );
@@ -8997,7 +3576,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_4  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
+    .E(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o_SB_DFFESR_Q_E ),
     .Q(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [0]),
     .R(\uart_inst.reset_sync )
   );
@@ -9025,1005 +3604,6 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3])
   );
-  SB_RAM40_4K #(
-    .INIT_0(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_1(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_2(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_3(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_4(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_5(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_6(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_7(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_8(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_9(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_A(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_B(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_C(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_D(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_E(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .INIT_F(256'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx),
-    .READ_MODE(2'h1),
-    .WRITE_MODE(2'h1)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0  (
-    .MASK(16'h0000),
-    .RADDR({ 2'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR [2], 5'h00, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [1], \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [1] }),
-    .RCLK(clk_16),
-    .RCLKE(1'h1),
-    .RDATA({ \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [15], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [13], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [11], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [9], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [7], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [5], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [3], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [2], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [1], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [2] }),
-    .RE(1'h1),
-    .WADDR({ 2'h0, \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0], 5'h00, \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [3:1] }),
-    .WCLK(clk_16),
-    .WCLKE(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE ),
-    .WDATA({ 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_4 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_2 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_6 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_1 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_5 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_3 , 1'h0, \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_7  }),
-    .WE(1'h1)
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3003)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_4 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_2 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_6 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_1 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [3]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_DFF_Q_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_5 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_3 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_7 ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_LUT4_I0_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0_O_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [7]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0_O [2]),
-    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_DFF_Q_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc00c)
-  ) \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE ),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_1_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_1 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_2_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_2 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_3_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_3 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_4_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_4 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_5_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_5 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_6_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_6 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_7_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_7 )
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WDATA )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [7]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [6]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_1_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [5]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_2_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [4]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [3]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_3_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [3]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.result_d [3]),
-    .E(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [0]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0100)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_2  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [3])
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_5_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [1]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_6_D )
-  );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [2]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0001)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D_SB_LUT4_O_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_D )
-  );
-  SB_DFFSR \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D [1]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write ),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfff0)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0f00)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_I3_1  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_DFF_Q_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9f00)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9009)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [0]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9009)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00fe)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h000c)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00f0)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_I3_O )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(1'h1),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_I0  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_I3 ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I1(1'h1)
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [2]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [3]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h8421)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [2])
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [4]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [5]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [6]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_DFFER \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.parser_inst.rx_data_prev [7]),
-    .E(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0c00)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_DFFER_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3 ),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3 ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I1(1'h1)
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I1(1'h1)
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I1(1'h1)
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1]),
-    .I1(1'h1)
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0c00)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h3000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'he0f0)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0888)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h8000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [0]),
-    .I1(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [1]),
-    .I2(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [2]),
-    .I3(\uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h4000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_data_in_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write ),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_I3 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O [0])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'haf23)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [4]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_I3 [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O [0]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O [1]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1])
-  );
-  SB_DFFSR \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFSR_Q  (
-    .C(clk_16),
-    .D(1'h1),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [0]),
-    .R(\uart_inst.reset_sync )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h9000)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'ha521)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [3]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc4f5)
-  ) \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2_SB_LUT4_O_1  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [4]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [2]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 [3])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.last_write_addr_SB_DFF_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [4])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.last_write_addr_SB_DFF_Q_1  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [3])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.last_write_addr_SB_DFF_Q_2  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [2]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [2])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.last_write_addr_SB_DFF_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [1]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [1])
-  );
-  SB_DFF \uart_inst.uart_mod_inst.tx_fifo.last_write_addr_SB_DFF_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [0]),
-    .Q(\uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0])
-  );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q_D ),
@@ -10041,7 +3621,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
     .I1(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [2]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
@@ -10063,7 +3643,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.bit_cnt_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
     .I1(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [1]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [0]),
@@ -10100,229 +3680,136 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(\uart_inst.uart_mod_inst.tx_inst.bit_cnt [2]),
     .I1(1'h1)
   );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [8]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [7]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q_1  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [7]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [6]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q_2  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [6]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [5]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q_3  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [5]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [4]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q_4  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [4]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [3]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
+  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFESR_Q_5  (
+    .C(clk_16),
+    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg [2]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [1]),
+    .R(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2])
+  );
   SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q  (
     .C(clk_16),
-    .D(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
+    .D(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [8])
   );
   SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [7])
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
+    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [2])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
+    .LUT_INIT(16'h00fc)
   ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [8]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
+    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [3]),
+    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1]),
     .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'hcfff)
+  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2  (
+    .I0(1'h0),
+    .I1(\uart_inst.reset_sync ),
+    .I2(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1]),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
+    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h0100)
+  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1  (
+    .I0(\uart_inst.reset_sync ),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
+    .I2(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1]),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
+    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h3f00)
+  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0]),
+    .I2(\uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [1]),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
+    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1])
   );
   SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [6])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [7]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [6]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3 [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hb800)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [0]),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [5])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [6]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [5]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [4])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [5]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [4]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [4]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [3]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [3]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [2]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [2]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [1]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O_I3 [2])
-  );
-  SB_DFFE \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_E ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_1_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.data_reg [0])
   );
   SB_LUT4 #(
-    .LUT_INIT(16'h0cfc)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O  (
+    .LUT_INIT(16'h00fc)
+  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O  (
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.tx_inst.data_reg [1]),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O_I3 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h003f)
-  ) \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.last_data_in [0]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_LUT4_I0_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O_I3 [2])
+    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[2]),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [1]),
+    .O(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [18]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [17]),
     .R(\uart_inst.reset_sync )
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_10  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_10_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [8]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_10_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [8]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ),
@@ -10337,7 +3824,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_11  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_11_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [7]),
     .R(\uart_inst.reset_sync )
   );
@@ -10359,14 +3846,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_12  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_12_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [6]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [6]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ),
@@ -10381,14 +3868,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_13  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_13_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [5]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_13_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [5]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ),
@@ -10403,14 +3890,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_14  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_14_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [4]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_14_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [4]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ),
@@ -10425,7 +3912,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [3]),
     .R(\uart_inst.reset_sync )
   );
@@ -10435,7 +3922,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [0]),
     .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D )
   );
   SB_LUT4 #(
@@ -10448,7 +3935,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [0])
   );
   SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3),
+    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
     .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
     .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
     .I1(1'h1)
@@ -10456,7 +3943,7 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
     .R(\uart_inst.reset_sync )
   );
@@ -10464,15 +3951,30 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .LUT_INIT(16'h0fcc)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[0]),
+    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [0]),
     .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D )
+  );
+  SB_LUT4 #(
+    .LUT_INIT(16'h6996)
+  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O  (
+    .I0(1'h0),
+    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
+    .I2(1'h1),
+    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [0])
+  );
+  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CO  (
+    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
+    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_I3 ),
+    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
+    .I1(1'h1)
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
     .R(\uart_inst.reset_sync )
   );
@@ -10480,24 +3982,15 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .LUT_INIT(16'h0fcc)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O  (
     .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [0]),
+    .I1(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[0]),
     .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
-    .I2(1'h1),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [0])
   );
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_18  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_18_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
     .R(\uart_inst.reset_sync )
   );
@@ -10507,13 +4000,13 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(1'h0),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
     .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I3(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_18_D )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [17]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
@@ -10528,14 +4021,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_2  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_2_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [16]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_2_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [16]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
@@ -10550,14 +4043,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_3  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_3_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [15]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_3_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [15]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ),
@@ -10572,14 +4065,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_4  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_4_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [14]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_4_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [14]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ),
@@ -10594,14 +4087,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_5  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_5_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [13]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_5_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [13]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ),
@@ -10616,14 +4109,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_6  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_6_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [12]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_6_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [12]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ),
@@ -10638,14 +4131,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_7  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_7_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [11]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_7_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [11]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ),
@@ -10660,14 +4153,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_8  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_8_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [10]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_8_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [10]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ),
@@ -10682,14 +4175,14 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9  (
     .C(clk_16),
     .D(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9_D ),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O ),
+    .E(\uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3_SB_LUT4_I2_O ),
     .Q(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [9]),
     .R(\uart_inst.reset_sync )
   );
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [9]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ),
@@ -10704,290 +4197,11 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
   SB_LUT4 #(
     .LUT_INIT(16'h4114)
   ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O  (
-    .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
+    .I0(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3),
     .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [18]),
     .I2(1'h1),
     .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I3 ),
     .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [0]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [1]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [3]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [4]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [5]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [6]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [7]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [8]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [9]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [10]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [11]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [12]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [13]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [14]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [15]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [16]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [17]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_CI_SB_CARRY_CO_I1 )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h00ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_I1_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(1'h0),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [18]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_CARRY_CO_I1 )
   );
   SB_CARRY \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO  (
     .CI(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ),
@@ -10995,549 +4209,184 @@ module icebreaker(CLK, BTN_N, rxd_i, txd_o, LEDG_N);
     .I0(\uart_inst.uart_mod_inst.tx_inst.prescale_reg [17]),
     .I1(1'h1)
   );
-  SB_DFFESR \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_DFFESR_Q  (
-    .C(clk_16),
-    .D(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .E(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_DFFESR_Q_E ),
-    .Q(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ),
-    .R(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hfff0)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_DFFESR_Q_E_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_DFFESR_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff0f)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf000)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3 [1]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hff0f)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_O )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hcfcc)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_1  (
-    .I0(1'h0),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [1]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
-    .O(txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E)
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [2])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hc300)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4]),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4]),
-    .I3(\uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2]),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h2230)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_I2  (
-    .I0(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
-    .I1(\uart_inst.reset_sync ),
-    .I2(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [2]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [1])
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'hf0ff)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_I3  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.reset_sync ),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3]),
-    .O(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_E )
-  );
-  SB_LUT4 #(
-    .LUT_INIT(16'h6996)
-  ) \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_O  (
-    .I0(1'h0),
-    .I1(1'h0),
-    .I2(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3]),
-    .I3(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
-    .O(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [2])
-  );
-  SB_CARRY \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO  (
-    .CI(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ),
-    .CO(\uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O_SB_LUT4_O_I3 ),
-    .I0(1'h0),
-    .I1(\uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2])
-  );
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3 , 1'h1 };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.parser_inst.operand_q[0] [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [2] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [2] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [1:0] = 2'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1:0] = 2'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [1] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [19] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[0] [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_10_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [1:0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I2 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [7] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2 [1:0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [1:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2_SB_LUT4_O_1_I0 [3];
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [6] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [3];
-  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[0] = \uart_inst.uart_mod_inst.tx_inst.data_reg [8];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [1:0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I2 [1:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [31];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3[0] = \uart_inst.uart_mod_inst.tx_inst.bit_cnt [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_9_I2 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [7] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3_SB_LUT4_O_I1 [1] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [1:0] = 2'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I3_O [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [3] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_6_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [25] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3_SB_LUT4_O_I1 [1] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_7_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [1] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_1_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_I3 [2:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write , \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0], \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_Q [0];
+  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[2] = txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 , \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_I3 , 1'h1 };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I1_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O [0] = \uart_inst.reset_sync ;
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_I3_O [2] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ;
   assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_O_I2 [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [1], \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [0] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_22_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [9] };
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [28] };
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_5_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [7] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [22] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I3 ;
-  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[2] = \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_16_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [15] };
-  assign \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2:1] = { \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 , txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_30_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I2  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [18] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [0], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [0] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_1_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q , \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_19_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [12] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I2 [1] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [1];
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_6_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I3 [2:0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2_SB_LUT4_O_I0 [2:0];
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [1], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0], \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1] };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1 [1];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1];
   assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_2_D_SB_LUT4_O_I2 [0] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0];
-  assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_2_D_SB_LUT4_O_I2 [2] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_2_D_SB_LUT4_O_I2 [2] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [2:1] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [2:1];
+  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [3] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [1:0] = { \uart_inst.reset_sync , \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3] = 1'h1;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [4], \uart_inst.reset_sync  };
+  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [0] = \uart_inst.reset_sync ;
+  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_1_D_SB_LUT4_O_I3 [2] = txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3;
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 ;
+  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1:0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3 [1:0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
+  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1];
+  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2] };
+  assign \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [2:1] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3, txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1] };
+  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2:1] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [0];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1 [3:2] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_O [2:1];
+  assign txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3[0] = \uart_inst.uart_mod_inst.tx_inst.bit_cnt [0];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1 [3], \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_3_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_O_SB_LUT4_O_I3 , 1'h1 };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 [2] };
   assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [0] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0];
-  assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1], rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_29_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [2] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O_SB_LUT4_I3_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_7_Q , \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_O [1:0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [1], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_24_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_28_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [1] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1 [1] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3 ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4], \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D [0] = \uart_inst.reset_sync ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_27_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [0] };
-  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3 [0] = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1:0] = 2'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [1:0] = { \uart_inst.reset_sync , \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_5_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [26] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D [1:0] = { \uart_inst.reset_sync , \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [2] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D [3] = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [3] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D [1:0] = { \uart_inst.reset_sync , \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [1] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_3_D [3] = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_O [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [5] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [0], \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_25_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [2] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_WCLKE_SB_LUT4_I1_O [0] = \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o_SB_DFFESR_Q_2_D_SB_LUT4_I2_O [0] = \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_3_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RADDR_1 [0] = \uart_inst.uart_mod_inst.tx_fifo.last_write_addr [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_4_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [27] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_2_I2 [1:0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_8_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [23] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_8_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [1] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [3];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [1] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_7_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_3_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_6_I0 [1] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_3_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [6] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3 , 1'h1 };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_24_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [1] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_2_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [0] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [5] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_6_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1 [3] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [4] };
-  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [2:1] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_4_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [5] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3 [0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q [0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI , 1'h1 };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_31_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [0], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_I0 [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_13_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_12_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [1] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [1];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [3] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [3];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_LUT4_I2_O_SB_LUT4_I2_O [1], \uart_inst.uart_mod_inst.tx_fifo.last_data_in [3] };
-  assign \uart_inst.uart_mod_inst.tx_inst.data_reg_SB_DFFE_Q_5_D_SB_LUT4_O_I3 [1:0] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_1_O[1], \uart_inst.uart_mod_inst.tx_inst.data_reg [4] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [30] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [4] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [6] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2_SB_LUT4_O_1_I0 [1:0] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI , 1'h1 };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_13_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_25_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r_SB_DFFESR_Q_30_D_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_27_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2_SB_LUT4_O_1_I0  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_29_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [8] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_14_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_26_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_21_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [10] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_23_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_1_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_11_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [20] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_15_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_18_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [13] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [29] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [11] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2_SB_LUT4_O_1_I0 [1:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_I0 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2], \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_16_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_7_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [24] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_20_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [1] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2_SB_LUT4_O_1_I0  };
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_LUT4_I1_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI , 1'h1 };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_17_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [1:0] = 2'h0;
-  assign \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [3] = \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_17_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [14] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.opB_r [18];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI , \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1  };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [1] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3_SB_LUT4_O_I3 [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_18_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O [0] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [0] = \uart_inst.uart_mod_inst.rx_inst.prescale_reg [0];
-  assign \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [3] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3:2] = { \uart_inst.uart_mod_inst.tx_fifo.last_write_SB_DFFSR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_1_I1_SB_LUT4_I2_I3_SB_CARRY_CO_I1_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 [2], \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O_SB_LUT4_O_1_I2_SB_LUT4_O_I2  };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_19_I0 [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_DFF_Q_D_SB_LUT4_O_I3 [1], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o  };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0 [3:2] = { 1'h1, \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O  };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2 [1:0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [1:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_21_I0 [2:1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_15_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [16] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_14_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [17] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_31_I0 [2:1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
-  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [0] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0];
-  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I0_SB_LUT4_I1_O [1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_I3_SB_LUT4_O_I1 ;
-  assign \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [1:0] = { rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[2], \uart_inst.reset_sync  };
-  assign \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_E_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_I2_O [0] = \uart_inst.uart_mod_inst.parser_inst.operand_q[0] [0];
-  assign \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I1 [2:1] = { \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_D_SB_LUT4_O_I0 , txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [0], \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_4_I0 [3] };
-  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I0 [3:1] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2:1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5] };
-  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1];
+  assign \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_1_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1], rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1] };
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [0] = rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[0];
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_I0_I3 , 1'h1 };
+  assign \uart_inst.uart_mod_inst.tx_inst.prescale_reg_SB_DFFESR_Q_16_D_SB_LUT4_O_I1 [2:1] = { txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_E_SB_LUT4_O_I3, txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_2_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2 [1:0] = { \uart_inst.reset_sync , \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO , 1'h1 };
+  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg_SB_DFFSR_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o [4], \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [4] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3_SB_LUT4_O_I3 , 1'h1 };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI ;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1_SB_LUT4_I0_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_I1 [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_7_D_SB_LUT4_O_I2 ;
+  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_15_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_I3_O [1];
   assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [2] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [1];
-  assign \uart_inst.uart_mod_inst.rx_inst.prescale_reg_SB_DFFESR_Q_11_D_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_E_SB_LUT4_O_I3 , \uart_inst.uart_mod_inst.rx_inst.data_reg_SB_DFFESR_Q_R [2] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_20_I0 [2:1] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r_SB_DFF_Q_D_SB_LUT4_O_I3 [0] = \uart_inst.reset_sync ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_10_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [21] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I2_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1], \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_R [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5];
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I3 [2] = \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 [0];
-  assign rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[1] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt [3];
-  assign rxd_i_SB_LUT4_I3_O_SB_DFFSR_D_Q[3] = \uart_inst.uart_mod_inst.rx_inst.bit_cnt_SB_DFFESR_Q_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg_SB_LUT4_I2_I3_SB_LUT4_I3_O [0] = txd_o_SB_LUT4_O_I3_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [31] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O_SB_LUT4_O_I2 [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_6_Q [0];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_28_D_SB_LUT4_O_I1_SB_LUT4_O_1_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r [3], \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [3] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.mul_inst.opA_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I2 [1:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_23_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_26_I0 [0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I2_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_O [0] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFR_D_5_Q [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [0] = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I1 [3] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r_SB_DFFESR_Q_12_D_SB_LUT4_O_I3 ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.shift_counter_r_SB_DFFESR_Q_R [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r [1];
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_22_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.operand_q[6]_SB_DFFR_D_3_Q [2], \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_11_I3_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_I1_O [1] };
-  assign \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_1_I3 [2:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_Q , \uart_inst.uart_mod_inst.parser_inst.result_d_SB_LUT4_O_8_I0 [2] };
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [0] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_8 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [2] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_6 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [4] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_5 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [6] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_4 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [8] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_3 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [10] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_2 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [12] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_1 [2];
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA_7 [14] = \uart_inst.uart_mod_inst.tx_fifo.inst_ram.mem.0.0_RDATA [2];
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_CARRY_I0_CO_SB_LUT4_I3_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_I3_I0 [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_1_D_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I0 [2], \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg  };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_O_I3 [3] = \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [1:0] = 2'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [3] = \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I3 ;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 [0] = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I1 [3:2] = { \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I2_SB_LUT4_O_1_I1_SB_LUT4_O_I1_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1_SB_LUT4_I1_O_SB_LUT4_O_I3 , 1'h1 };
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o_SB_LUT4_I0_O_SB_LUT4_I0_O [1:0] = { \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [5], \uart_inst.reset_sync  };
+  assign \uart_inst.uart_mod_inst.parser_inst.state_d_SB_DFFER_D_E_SB_LUT4_O_I1_SB_LUT4_O_I3 [1:0] = { \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2 [2], \uart_inst.uart_mod_inst.parser_inst.byte_count_d_SB_DFFNESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_I2 [2] };
   assign clk_12 = CLK;
   assign \uart_inst.clk_i  = clk_16;
   assign \uart_inst.rst_i  = BTN_N;
   assign \uart_inst.rxd_i  = rxd_i;
   assign \uart_inst.txd_o  = txd_o;
   assign \uart_inst.uart_mod_inst.clk_i  = clk_16;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.carry  = { 1'hx, \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CO [2:0], \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CO , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CO , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CO , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CO , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CI , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CO [2:0], \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CO , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CO , 1'h0 };
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [31] = 1'hx;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CO ;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.carry  = 33'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].c_out  = 4'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CI  = 1'h0;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CO  = 4'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [3:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [3:0];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CO ;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [15:12];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [15:12];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CO ;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CO [3];
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [19:16];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [19:16];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CO ;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[16].carry4_inst.CO [3];
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].c_out  = 4'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CO  = 4'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [23:20];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [23:20];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CO ;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[20].carry4_inst.CO [3];
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].c_out  = 4'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CI  = 1'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CO  = 4'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [27:24];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [27:24];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].c_out  = { 1'hx, \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CO [2:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[24].carry4_inst.CO [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CO [3] = 1'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CI  = 1'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].carry4_inst.DI  = { 1'hx, \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [30:28] };
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[28].g  = { 1'hx, \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [30:28] };
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].c_out  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CO ;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[0].carry4_inst.CO [3];
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].c_out  = 4'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CI  = 1'hx;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CO  = 4'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [7:4];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [7:4];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].c_out  = { \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CI , \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CO [2:0] };
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[4].carry4_inst.CO [3];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CO [3] = \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[12].carry4_inst.CI ;
+  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CI  = 1'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.CYINIT  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].carry4_inst.DI  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [11:8];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.genblk1[8].g  = \uart_inst.uart_mod_inst.parser_inst.add_inst.g_i [11:8];
-  assign \uart_inst.uart_mod_inst.parser_inst.add_inst.sum_o [32] = 1'hx;
-  assign \uart_inst.uart_mod_inst.parser_inst.add_result [31:1] = \uart_inst.uart_mod_inst.parser_inst.add_inst.sum_o [31:1];
   assign \uart_inst.uart_mod_inst.parser_inst.clk_i  = clk_16;
   assign \uart_inst.uart_mod_inst.parser_inst.div_valid  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.lsb_d  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
   assign \uart_inst.uart_mod_inst.parser_inst.msb_d  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.adder_result [32] = 1'hx;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.clk_i  = clk_16;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.curr_state_r [0] = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.gets_high_part_i  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.gets_high_part_r  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.need_neg_result_r  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.reset_i  = \uart_inst.reset_sync ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_o  = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.shifted_adder_result  = { 2'b0x, \uart_inst.uart_mod_inst.parser_inst.mul_inst.adder_result [31:1] };
+  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.shifted_adder_result  = 33'h0xxxxxxxx;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA_i  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opA_r  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB_i  = 1'h0;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.signed_opB_r  = 1'h0;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_inst.yumi_i  = 1'h1;
   assign \uart_inst.uart_mod_inst.parser_inst.mul_ready  = \uart_inst.uart_mod_inst.parser_inst.mul_inst.ready_and_o ;
-  assign \uart_inst.uart_mod_inst.parser_inst.mul_result  = \uart_inst.uart_mod_inst.parser_inst.mul_inst.result_r ;
   assign \uart_inst.uart_mod_inst.parser_inst.opcode_d  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand1_d  = { \uart_inst.uart_mod_inst.parser_inst.operand_q[3] , \uart_inst.uart_mod_inst.parser_inst.operand_q[2] , \uart_inst.uart_mod_inst.parser_inst.operand_q[1] , \uart_inst.uart_mod_inst.parser_inst.operand_q[0]  };
-  assign \uart_inst.uart_mod_inst.parser_inst.operand2_d  = { \uart_inst.uart_mod_inst.parser_inst.operand_q[7] , \uart_inst.uart_mod_inst.parser_inst.operand_q[6] , \uart_inst.uart_mod_inst.parser_inst.operand_q[5] , \uart_inst.uart_mod_inst.parser_inst.operand_q[4]  };
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[0]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[1]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[2]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[3]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[4]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[5]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[6]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
-  assign \uart_inst.uart_mod_inst.parser_inst.operand_d[7]  = \uart_inst.uart_mod_inst.parser_inst.rx_data_prev ;
   assign \uart_inst.uart_mod_inst.parser_inst.rst_i  = \uart_inst.reset_sync ;
   assign \uart_inst.uart_mod_inst.parser_inst.rx_data_i  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg ;
   assign \uart_inst.uart_mod_inst.parser_inst.rx_valid_i  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
+  assign \uart_inst.uart_mod_inst.parser_inst.tx_data_o [1:0] = { 1'h0, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2] };
+  assign \uart_inst.uart_mod_inst.parser_inst.tx_data_o [7:3] = 5'h00;
+  assign \uart_inst.uart_mod_inst.parser_inst.tx_valid_o  = \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2];
   assign \uart_inst.uart_mod_inst.rst_i  = \uart_inst.reset_sync ;
   assign \uart_inst.uart_mod_inst.rx_data  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg ;
   assign \uart_inst.uart_mod_inst.rx_inst.clk  = clk_16;
   assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tdata_reg ;
-  assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tready  = 1'hx;
   assign \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
   assign \uart_inst.uart_mod_inst.rx_inst.prescale  = 16'h0011;
   assign \uart_inst.uart_mod_inst.rx_inst.rst  = \uart_inst.reset_sync ;
   assign \uart_inst.uart_mod_inst.rx_inst.rxd  = rxd_i;
-  assign \uart_inst.uart_mod_inst.rx_ready  = 1'hx;
   assign \uart_inst.uart_mod_inst.rx_valid  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
   assign \uart_inst.uart_mod_inst.rxd_i  = rxd_i;
+  assign \uart_inst.uart_mod_inst.tx_data  = { 5'h00, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2], 1'h0, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2] };
   assign \uart_inst.uart_mod_inst.tx_fifo.clk_i  = clk_16;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.clk_i  = clk_16;
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_n [4] = 1'hx;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_o  = \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o ;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.down_i  = 1'h0;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.reset_i  = \uart_inst.reset_sync ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_n  = { 1'hx, \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_n [3:0] };
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_wr.clk_i  = clk_16;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_wr.count_o  = \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o ;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_wr.down_i  = 1'h0;
   assign \uart_inst.uart_mod_inst.tx_fifo.counter_wr.reset_i  = \uart_inst.reset_sync ;
+  assign \uart_inst.uart_mod_inst.tx_fifo.data_i  = { 5'h00, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2], 1'h0, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2] };
   assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.clk_i  = clk_16;
-  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.rd_addr_i  = \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_n [3:0];
   assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.rd_valid_i  = 1'h1;
   assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.reset_i  = \uart_inst.reset_sync ;
   assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.wr_addr_i  = \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o [3:0];
-  assign \uart_inst.uart_mod_inst.tx_fifo.next_read  = { 1'hx, \uart_inst.uart_mod_inst.tx_fifo.counter_rd.count_n [3:0] };
+  assign \uart_inst.uart_mod_inst.tx_fifo.inst_ram.wr_data_i  = { 5'h00, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2], 1'h0, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2] };
   assign \uart_inst.uart_mod_inst.tx_fifo.read_ptr  = \uart_inst.uart_mod_inst.tx_fifo.counter_rd.temp_o ;
-  assign \uart_inst.uart_mod_inst.tx_fifo.ready_i  = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ;
   assign \uart_inst.uart_mod_inst.tx_fifo.reset_i  = \uart_inst.reset_sync ;
+  assign \uart_inst.uart_mod_inst.tx_fifo.valid_i  = \uart_inst.uart_mod_inst.rx_inst.m_axis_tvalid_reg ;
   assign \uart_inst.uart_mod_inst.tx_fifo.write_ptr  = \uart_inst.uart_mod_inst.tx_fifo.counter_wr.temp_o ;
   assign \uart_inst.uart_mod_inst.tx_inst.clk  = clk_16;
   assign \uart_inst.uart_mod_inst.tx_inst.prescale  = 16'h0011;
   assign \uart_inst.uart_mod_inst.tx_inst.rst  = \uart_inst.reset_sync ;
-  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tready  = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ;
+  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tdata  = { 5'h00, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2], 1'h0, \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2] };
+  assign \uart_inst.uart_mod_inst.tx_inst.s_axis_tvalid  = \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2];
   assign \uart_inst.uart_mod_inst.tx_inst.txd  = txd_o;
   assign \uart_inst.uart_mod_inst.tx_inst.txd_reg  = txd_o;
-  assign \uart_inst.uart_mod_inst.tx_ready  = \uart_inst.uart_mod_inst.tx_inst.s_axis_tready_reg ;
+  assign \uart_inst.uart_mod_inst.tx_valid  = \uart_inst.uart_mod_inst.parser_inst.tx_data_o [2];
   assign \uart_inst.uart_mod_inst.txd_o  = txd_o;
 endmodule

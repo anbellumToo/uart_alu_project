@@ -31,7 +31,7 @@ module uart_mod
     .rxd           (rxd_i),
     .m_axis_tdata  (rx_data),
     .m_axis_tvalid (rx_valid),
-    .m_axis_tready (rx_ready),
+    .m_axis_tready (tx_ready),
     .prescale      (PRESCALE_P),
     .busy          (),
     .overrun_error (),
@@ -46,8 +46,8 @@ module uart_mod
     .clk_i         (clk_i),
     .reset_i       (rst_i),
     .data_i        (tx_data),
-    .valid_i       (tx_valid),
-    .ready_o       (tx_ready_fifo),
+    .valid_i       (rx_valid),
+    .ready_o       (tx_ready),
     .data_o        (tx_data_fifo),
     .valid_o       (tx_valid_fifo),
     .ready_i       (tx_ready)
@@ -59,8 +59,8 @@ module uart_mod
   ) tx_inst (
     .clk           (clk_i),
     .rst           (rst_i),
-    .s_axis_tdata  (tx_data_fifo),
-    .s_axis_tvalid (tx_valid_fifo),
+    .s_axis_tdata  (tx_data),
+    .s_axis_tvalid (tx_valid),
     .s_axis_tready (tx_ready),
     .txd           (txd_o),
     .busy          (),
@@ -73,7 +73,7 @@ module uart_mod
     .rx_valid_i    (rx_valid),
     .rx_data_i     (rx_data),
     .tx_data_o     (tx_data),
-    .tx_ready      (tx_ready_fifo), // Connect to FIFO ready signal
+    .tx_ready      (tx_ready), // Connect to FIFO ready signal
     .tx_valid_o    (tx_valid)       // Connect to FIFO valid input
   );
 

@@ -184,10 +184,15 @@ bsg_imul_iterative #(.width_p(32)) mul_inst (
 
             TRANSMIT: begin
                 tx_valid_o = 1'b1;
-                tx_data_o = 8'd5;//result_d[7:0];
-                //result_d = result_q >> 8;
+                tx_data_o = result_d[7:0];
+                // result_d = result_q >> 8;
+                // tx_data_o = result_d[7:0];
+                // result_d = result_q >> 8;
+                // tx_data_o = result_d[7:0];
+                // result_d = result_q >> 8;
+                // tx_data_o = result_d[7:0];
                 //if (result_q == '0) begin
-                    state_d = IDLE;
+                state_d = IDLE;
                 //end
             end
         endcase

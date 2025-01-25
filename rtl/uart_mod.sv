@@ -46,11 +46,11 @@ module uart_mod
     .clk_i         (clk_i),
     .reset_i       (rst_i),
     .data_i        (tx_data),
-    .valid_i       (rx_valid),
-    .ready_o       (tx_ready),
+    .valid_i       (tx_valid),
+    .ready_i       (tx_ready),
+    .ready_o       (tx_ready_fifo),
     .data_o        (tx_data_fifo),
-    .valid_o       (tx_valid_fifo),
-    .ready_i       (tx_ready)
+    .valid_o       (tx_valid_fifo)
   );
 
   // UART TX instance
@@ -59,8 +59,8 @@ module uart_mod
   ) tx_inst (
     .clk           (clk_i),
     .rst           (rst_i),
-    .s_axis_tdata  (tx_data),
-    .s_axis_tvalid (tx_valid),
+    .s_axis_tdata  (tx_data_fifo),
+    .s_axis_tvalid (tx_valid_fifo),
     .s_axis_tready (tx_ready),
     .txd           (txd_o),
     .busy          (),
@@ -73,7 +73,7 @@ module uart_mod
     .rx_valid_i    (rx_valid),
     .rx_data_i     (rx_data),
     .tx_data_o     (tx_data),
-    .tx_ready      (tx_ready), // Connect to FIFO ready signal
+    .tx_ready      (tx_ready_fifo), // Connect to FIFO ready signal
     .tx_valid_o    (tx_valid)       // Connect to FIFO valid input
   );
 

@@ -52,11 +52,17 @@ module uart_runner;
     logic [7:0] rx_data;
     logic rx_valid;
 
+
+    logic receiving;
+    logic [7:0] received_data [0:255];
+    int byte_count;
+
     task automatic reset;
         $display("[TB] Resetting...");
         rst_i = 1;
         tx_valid = 0;
         tx_data = '0;
+        byte_count = '0;
         repeat(20) @(posedge clk_i);
         rst_i = 0;
         repeat(20) @(posedge clk_i);
@@ -106,23 +112,42 @@ endtask
 
     endtask
 
+    always @(posedge clk_i) begin
+        if (rx_valid) begin
+            received_data[byte_count] = rx_data;
+            $display("[RX] Received byte %0d: 0x%h", byte_count, rx_data);
+            byte_count++;
+        end
+    end
+
     task automatic receive_uart_packet(
         input logic [7:0] opcode,
         input logic [7:0] payload[],
         output logic [7:0] data[]
     );
-        int expected_bytes = (opcode == 8'hec) ? payload.size() :
-                            (opcode == 8'ha2) ? 8 : 4;
+        int expected_bytes;
+
+        expected_bytes = (opcode == 8'hec) ? payload.size() :
+                        (opcode == 8'ha2) ? 8 : 4;
 
         $display("[RX] Waiting for %0d bytes...", expected_bytes);
+        data = new[expected_bytes];
 
-        begin
-          #100000
-            if(rx_valid) begin
-                data = rx_data;
-                $display("[RX] Received byte %0d: 0x%h",
-                        data.size(), rx_data);
+        receiving = 1;
+
+        repeat(1000000) @(posedge clk_i);
+
+        receiving = 0;
+
+        if (byte_count != expected_bytes) begin
+            $display("[RX] Timeout! Received %0d/%0d bytes", byte_count, expected_bytes);
+            data = new[0];
+        end else begin
+            $display("[RX] Received all bytes successfully");
+            for (int i = 0; i < expected_bytes; i++) begin
+                data[i] = received_data[i];
             end
         end
     endtask
+
 endmodule

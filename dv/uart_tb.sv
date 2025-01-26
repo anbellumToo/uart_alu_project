@@ -18,8 +18,8 @@ module uart_tb;
         runner.reset();
         $display("\n=== Starting Tests ===");
 
-        //test_operation(8'hec, 1);  // Echo
-        test_operation(8'ha0, 1);  // Add
+        test_operation(8'hec, 1);  // Echo
+        test_operation(8'ha0, 2);  // Add
         // test_operation(8'ha1, 1);  // Mul
         // test_operation(8'ha2, 1);  // Div
 
@@ -37,6 +37,7 @@ module uart_tb;
         $display("\n==== Testing %s ====", get_opname(opcode));
 
         for(int i=0; i<num_tests; i++) begin
+            runner.reset();
             $display("\n[TEST %0d]", i+1);
             generate_random_payload(opcode, payload);
 
@@ -89,7 +90,7 @@ module uart_tb;
         input logic [7:0] payload[],
         input logic [7:0] received[]
     );
-        automatic logic [31:0] a, b, result, expected;
+        logic [31:0] a, b, result, expected;
 
         $display("[VERIFY] Starting verification...");
 
@@ -115,7 +116,7 @@ module uart_tb;
             case(opcode)
                 8'ha0: expected = a + b;
                 8'ha1: expected = a * b;
-                8'ha2: expected = a / b;  // b guaranteed !=0
+                8'ha2: expected = a / b;
             endcase
             $display("[VERIFY] Expected: 0x%h (%0d)", expected, expected);
 
@@ -143,5 +144,6 @@ module uart_tb;
         end
 
         total_errors = echo_errors + add_errors + mul_errors + div_errors;
+
     endfunction
 endmodule

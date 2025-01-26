@@ -139,7 +139,6 @@ always_comb begin
     tx_valid_o = 1'b0;
     mul_valid = 1'b0;
     div_valid = 1'b0;
-    add_valid = 1'b0;
     state_d = state_q;
 
     operand1_d = {operand_q[3], operand_q[2], operand_q[1], operand_q[0]};
@@ -203,7 +202,6 @@ always_comb begin
                     state_d = TRANSMIT;
                 end
                 OPCODE_ADD32: begin
-                    add_valid = 1'b1;
                     add_result = operand1_q + operand2_q;
                     tx_buffer_d = {add_result[31:24], add_result[23:16], add_result[15:8], add_result[7:0]};
                     tx_byte_count_d = 4;

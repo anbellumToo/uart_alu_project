@@ -10,6 +10,8 @@ module uart_tb;
     int mul_errors = 0;
     int div_errors = 0;
 
+    localparam test_count = 100;
+
     initial begin
         $dumpfile("waveform.vcd");
         $dumpvars(0, uart_tb);
@@ -18,15 +20,17 @@ module uart_tb;
         runner.reset();
         $display("\n=== Starting Tests ===");
 
-        test_operation(8'hec, 0);
-        test_operation(8'ha0, 0);
-        test_operation(8'ha1, 6);
-        test_operation(8'ha2, 0);
+        test_operation(8'hec, test_count);
+        test_operation(8'ha0, test_count);
+        test_operation(8'ha1, test_count);
+        test_operation(8'ha2, test_count);
 
         $display("\n=== Test Results ===");
         $display("Total errors: %0d", total_errors);
         $display("Echo: %0d, Add: %0d, Mul: %0d, Div: %0d",
                 echo_errors, add_errors, mul_errors, div_errors);
+        $display("=== Tests complete ===");
+        $display("Test_count: %0d", test_count);
         $finish;
     end
 
@@ -52,7 +56,7 @@ module uart_tb;
             runner.receive_uart_packet(opcode, payload, received);
             verify_response(opcode, payload, received);
 
-            #200000;
+            #2000;
         end
     endtask
 
@@ -66,24 +70,40 @@ module uart_tb;
         endcase
     endfunction
 
-    function void generate_random_payload(input logic [7:0] opcode, ref logic [7:0] payload[]);
-        automatic int length = (opcode == 8'ha2) ? 8: $urandom_range(2, 15);
-        payload = new[length];
+    function void generate_random_payload (input logic [7:0] opcode, ref logic [7:0] payload[]);
+    automatic int length = (opcode == 8'ha2) ? 8 : 16;
+    payload = new[length];
 
-        foreach(payload[i]) begin
-            payload[i] = $urandom_range(8'h1, 8'hFF);
+    foreach (payload[i]) begin
+        payload[i] = $urandom_range(8'h1, 8'hFF);
+    end
+
+    for (int i = 0; i < 8; i += 4) begin
+        if (opcode == 8'ha2) begin
+            payload[i + 1] = 8'h00;
+            payload[i + 2] = 8'h00;
+            payload[i + 3] = 8'h00;
         end
+    end
 
-        // 1 = divisor for for now
-        if(opcode == 8'ha2) begin
-            payload[4] = 8'h0;
-            payload[5] = 8'h0;
-            payload[6] = 8'h0;
-            payload[7] = 8'h1;  // MSB (divisor = 1)
+    for (int i = length; i < 16; i += 4) begin
+        if (opcode == 8'ha1) begin
+            payload = new[16];
+            payload[i + 0] = 8'h01;
+            payload[i + 1] = 8'h00;
+            payload[i + 2] = 8'h00;
+            payload[i + 3] = 8'h00;
+        end else if (opcode == 8'ha0) begin
+            payload = new[16];
+            payload[i + 0] = 8'h00;
+            payload[i + 1] = 8'h00;
+            payload[i + 2] = 8'h00;
+            payload[i + 3] = 8'h00;
         end
+    end
 
-        $display("[GEN] Payload size: %0d", payload.size());
-    endfunction
+    $display("[GEN] Payload size: %0d", payload.size());
+endfunction
 
     function void verify_response(
         input logic [7:0] opcode,
@@ -91,6 +111,8 @@ module uart_tb;
         input logic [7:0] received[]
     );
         logic [31:0] a, b, c, d, result, expected;
+        logic [31:0] quotient, remainder;
+        logic [31:0] quotient_received, remainder_received;
 
         $display("[VERIFY] Starting verification...");
 
@@ -114,29 +136,59 @@ module uart_tb;
             c = {payload[11], payload[10], payload[9], payload[8]};
             d = {payload[15], payload[14], payload[13], payload[12]};
 
-            $display("[VERIFY] Operands: A=0x%h (%0d), B=0x%h (%0d), , C=0x%h (%0d), , D=0x%h (%0d)", a, a, b, b, c, c, d, d);
+            $display("[VERIFY] Operands: A=0x%h (%0d), B=0x%h (%0d), C=0x%h (%0d), D=0x%h (%0d)", a, a, b, b, c, c, d, d);
+
+            quotient = (a / b);
+            remainder = (a % b);
 
             case(opcode)
-                8'ha0: expected = (a + b + c + d);
-                8'ha1: expected = (a * b * c * d);
-                8'ha2: expected = a / b;
+                8'ha0: expected = (a + b + c + d) & 32'hFFFFFFFF;
+                8'ha1: expected = (a * b * c * d) & 32'hFFFFFFFF;
             endcase
-            $display("[VERIFY] Expected: 0x%h (%0d)", expected, expected);
 
             if(received.size() >= 4) begin
                 result = {received[3], received[2], received[1], received[0]};
-                $display("[VERIFY] Received: 0x%h (%0d)", result, result);
 
-                if(result[23:3] !== expected[23:3]) begin
+                quotient_received = {received[7], received[6], received[5], received[4]};
+                remainder_received = {received[3], received[2], received[1], received[0]};
+
+                if (opcode == 8'ha0 || opcode == 8'ha1) begin
+                    $display("[VERIFY] Expected: 0x%h (%0d), Received: 0x%h (%0d)", expected, expected, result, result);
+                    $display("[RAW] Received bytes: 0x%h 0x%h 0x%h 0x%h | 0x%h 0x%h 0x%h 0x%h",
+                    received[0], received[1], received[2], received[3],
+                    received[4], received[5], received[6], received[7]);
+                end
+
+
+                if (opcode == 8'ha2) begin
+                    $display("[VERIFY] Expected Quotient:  0x%h (%0d), Remainder: 0x%h (%0d)",
+                    quotient, quotient, remainder, remainder);
+                    $display("[VERIFY] Received Quotient:  0x%h (%0d), Remainder: 0x%h (%0d)",
+                    quotient_received, quotient_received, remainder_received, remainder_received);
+                    $display("[RAW] Received bytes: 0x%h 0x%h 0x%h 0x%h | 0x%h 0x%h 0x%h 0x%h",
+                    received[0], received[1], received[2], received[3],
+                    received[4], received[5], received[6], received[7]);
+                end
+
+                if(result !== expected) begin
                     case(opcode)
                         8'ha0: add_errors++;
                         8'ha1: mul_errors++;
-                        8'ha2: div_errors++;
                     endcase
-                    $display("## ERROR Result mismatch!");
                 end
-            end
-            else begin
+
+                if (opcode == 8'ha2 & ((quotient_received !== quotient) || (remainder_received !== remainder))) begin
+                    div_errors++;
+                    $display("[VERIFY] Expected Quotient:  0x%h (%0d), Remainder: 0x%h (%0d)",
+                             quotient, quotient, remainder, remainder);
+                    $display("[VERIFY] Received Quotient:  0x%h (%0d), Remainder: 0x%h (%0d)",
+                             quotient_received, quotient_received, remainder_received, remainder_received);
+                             $display("[RAW] Received bytes: 0x%h 0x%h 0x%h 0x%h | 0x%h 0x%h 0x%h 0x%h",
+                             received[0], received[1], received[2], received[3],
+                             received[4], received[5], received[6], received[7]);
+
+                end
+            end else begin
                 case(opcode)
                     8'ha0: add_errors++;
                     8'ha1: mul_errors++;
@@ -145,8 +197,6 @@ module uart_tb;
                 $display("## ERROR Missing response!");
             end
         end
-
         total_errors = echo_errors + add_errors + mul_errors + div_errors;
-
     endfunction
 endmodule

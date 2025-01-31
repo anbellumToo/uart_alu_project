@@ -135,7 +135,7 @@ endtask
 
         receiving = 1;
 
-        repeat(1000000) @(posedge clk_i);
+        repeat(1000) @(posedge clk_i);
 
         receiving = 0;
 

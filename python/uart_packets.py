@@ -93,7 +93,7 @@ def main():
     if len(sys.argv) > 1:
         port = sys.argv[1]
     else:
-        port = "/dev/ttyUSB1"
+        port = "/dev/ttyUSB4"
 
     ser = serial.Serial(port=port, baudrate=115200, timeout=0)
     t = threading.Thread(target=read_thread, args=(ser,), daemon=True)

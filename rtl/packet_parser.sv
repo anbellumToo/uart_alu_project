@@ -55,21 +55,6 @@ logic [31:0] product_q, product_d;
 logic [3:0]  mul_counter_q, mul_counter_d;
 logic        mul_start_q, mul_start_d;
 
-// bsg_imul_iterative #(.width_p(32)) mul_inst (
-//     .clk_i(clk_i),
-//     .reset_i(rst_i),
-//     .v_i(mul_valid),
-//     .ready_and_o(),
-//     .opA_i(operand1_q),
-//     .signed_opA_i(1'b0),
-//     .opB_i(operand2_q),
-//     .signed_opB_i(1'b0),
-//     .gets_high_part_i(1'b0),
-//     .v_o(mul_ready),
-//     .result_o(mul_result),
-//     .yumi_i(1'b1)
-// );
-
 bsg_imul_iterative #(.width_p(32)) mul_inst (
     .clk_i(clk_i),
     .reset_i(rst_i),
@@ -209,7 +194,6 @@ always_comb begin
         sum_stage2_d[i] = sum_stage2_q[i];
     end
 
-
     case (state_q)
         IDLE: begin
             result_d = 32'b0;
@@ -297,15 +281,12 @@ always_comb begin
                       end
                     end
                     else begin
-                      tx_buffer_d     = {
-                        product_q[31:24], product_q[23:16],
-                        product_q[15:8],  product_q[7:0]
-                      };
+                      tx_buffer_d = {product_q[31:24], product_q[23:16], product_q[15:8], product_q[7:0]};
                       tx_byte_count_d = 4;
-                      tx_index_d      = 0;
+                      tx_index_d = 0;
 
-                      mul_counter_d   = 0;
-                      mul_start_d     = 0;
+                      mul_counter_d = 0;
+                      mul_start_d = 0;
 
                       $display("[DUT] Product Result=0x%h", product_q);
                       state_d = TRANSMIT;

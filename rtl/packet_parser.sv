@@ -49,29 +49,35 @@ logic [31:0] sum_stage2_d [0:1];
 logic [31:0] sum_stage2_q [0:1];
 
 logic [31:0] sum_final;
-logic [7:0] start_byte;
+logic [7:0] start_byte, start_byte_m;
 
-// // Instantiate Adder
-// adder_with_handshake adder_inst (
-//     .clk        (clk_i),
-//     .rst_n      (~rst_i),      // Active low reset
-//     .a          (operand1_q),
-//     .b          (operand2_q),
-//     .valid_in   (add_valid),
-//     .ready_out  (adder_ready_out),
-//     .sum        (add_result),
-//     .valid_out  (adder_valid_out),
-//     .ready_in   (adder_ready_in)
+logic [31:0] product_q, product_d;
+logic [3:0]  mul_counter_q, mul_counter_d;
+logic        mul_start_q, mul_start_d;
+
+// bsg_imul_iterative #(.width_p(32)) mul_inst (
+//     .clk_i(clk_i),
+//     .reset_i(rst_i),
+//     .v_i(mul_valid),
+//     .ready_and_o(),
+//     .opA_i(operand1_q),
+//     .signed_opA_i(1'b0),
+//     .opB_i(operand2_q),
+//     .signed_opB_i(1'b0),
+//     .gets_high_part_i(1'b0),
+//     .v_o(mul_ready),
+//     .result_o(mul_result),
+//     .yumi_i(1'b1)
 // );
 
 bsg_imul_iterative #(.width_p(32)) mul_inst (
     .clk_i(clk_i),
     .reset_i(rst_i),
-    .v_i(mul_valid),
+    .v_i(mul_start_q),
     .ready_and_o(),
-    .opA_i(operand1_q),
+    .opA_i(product_q),
     .signed_opA_i(1'b0),
-    .opB_i(operand2_q),
+    .opB_i(operand_next),
     .signed_opB_i(1'b0),
     .gets_high_part_i(1'b0),
     .v_o(mul_ready),
@@ -115,6 +121,10 @@ always_ff @(posedge clk_i or posedge rst_i) begin
         tx_buffer_q <= 128'b0;
         tx_byte_count_q <= 8'b0;
         tx_index_q <= 8'b0;
+        product_q <= 32'b0;
+        mul_counter_q <= 4'b0;
+        mul_start_q <= 1'b0;
+
     end else begin
         for (int i = 0; i < 16; i++) begin
             operand_q[i] <= operand_d[i];
@@ -137,6 +147,9 @@ always_ff @(posedge clk_i or posedge rst_i) begin
         tx_buffer_q <= tx_buffer_d;
         tx_byte_count_q <= tx_byte_count_d;
         tx_index_q <= tx_index_d;
+        product_q <= product_d;
+        mul_counter_q <= mul_counter_d;
+        mul_start_q <= mul_start_d;
     end
 end
 
@@ -148,6 +161,13 @@ always_ff @(negedge clk_i) begin
     end else if (state_q != RECEIVE) begin
         byte_count_d <= 8'b0;
     end
+end
+
+logic [31:0] operand_next;
+always_comb begin
+    start_byte_m = mul_counter_q * 4;
+    operand_next = {operand_q[start_byte_m + 3], operand_q[start_byte_m + 2],
+                    operand_q[start_byte_m + 1], operand_q[start_byte_m + 0]};
 end
 
 always_comb begin
@@ -167,6 +187,11 @@ always_comb begin
     tx_buffer_d = tx_buffer_q;
     tx_byte_count_d = tx_byte_count_q;
     tx_index_d = tx_index_q;
+
+    product_d = product_q;
+
+    mul_counter_d = mul_counter_q;
+    mul_start_d = mul_start_q;
 
     add_result = '0;
     start_byte = 0;
@@ -251,17 +276,41 @@ always_comb begin
                     state_d = TRANSMIT;
                 end
                 OPCODE_MUL32: begin
-                    mul_valid = 1'b1;
-                    if (mul_ready) begin
-                        tx_buffer_d = {mul_result[31:24], mul_result[23:16], mul_result[15:8], mul_result[7:0]};
-                        $display("[DUT] A=0x%h, B=0x%h, Result=0x%h", operand1_q, operand2_q, mul_result);
-                        tx_byte_count_d = 4;
-                        tx_index_d = 0;
-                        state_d = TRANSMIT;
-                    end else begin
-                        state_d = COMPUTE;
+                    mul_counter_d = mul_counter_q;
+                    mul_start_d   = mul_start_q;
+                    product_d     = product_q;
+                    state_d       = COMPUTE;
+
+                    if (mul_start_q && mul_ready) begin
+                      product_d     = mul_result;
+                      mul_counter_d = mul_counter_q + 1;
+                      mul_start_d   = 1'b0;
                     end
-                end
+
+                    if (mul_counter_q == 0) begin
+                      product_d     = operand_next;
+                      mul_counter_d = 1;
+                    end
+                    else if (mul_counter_q < (lsb_q / 4)) begin
+                      if (!mul_start_q && !mul_ready) begin
+                        mul_start_d = 1'b1;
+                      end
+                    end
+                    else begin
+                      tx_buffer_d     = {
+                        product_q[31:24], product_q[23:16],
+                        product_q[15:8],  product_q[7:0]
+                      };
+                      tx_byte_count_d = 4;
+                      tx_index_d      = 0;
+
+                      mul_counter_d   = 0;
+                      mul_start_d     = 0;
+
+                      $display("[DUT] Product Result=0x%h", product_q);
+                      state_d = TRANSMIT;
+                    end
+                  end
                 OPCODE_DIV32: begin
                     div_valid = 1'b1;
                     if (div_ready) begin
@@ -296,7 +345,6 @@ always_comb begin
                 state_d = IDLE;
             end
         end
-
         default: state_d = IDLE;
     endcase
 end

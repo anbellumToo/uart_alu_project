@@ -43,15 +43,13 @@ logic add_ready, mul_ready, div_ready;
 
 logic [31:0] add_result, mul_result, div_quotient, div_remainder;
 
-logic        adder_valid_in;
-logic        adder_ready_out;
+logic [31:0] sum_stage1_d [0:3];
+logic [31:0] sum_stage1_q [0:3];
+logic [31:0] sum_stage2_d [0:1];
+logic [31:0] sum_stage2_q [0:1];
 
-logic        adder_valid_out;
-logic        adder_ready_in;
-
-logic [31:0] start_byte;
-logic [31:0] operand;
-
+logic [31:0] sum_final;
+logic [7:0] start_byte;
 
 // // Instantiate Adder
 // adder_with_handshake adder_inst (
@@ -99,6 +97,12 @@ always_ff @(posedge clk_i or posedge rst_i) begin
         for (int i = 0; i < 16; i++) begin
             operand_q[i] <= 8'h00;
         end
+        for (int i = 0; i < 4; i++) begin
+            sum_stage1_q[i] <= 8'h00;
+        end
+        for (int i = 0; i < 2; i++) begin
+            sum_stage2_q[i] <= 8'h00;
+        end
         state_q <= IDLE;
         operand1_q <= 32'b0;
         operand2_q <= 32'b0;
@@ -114,6 +118,12 @@ always_ff @(posedge clk_i or posedge rst_i) begin
     end else begin
         for (int i = 0; i < 16; i++) begin
             operand_q[i] <= operand_d[i];
+        end
+        for (int i = 0; i < 4; i++) begin
+            sum_stage1_q[i] <= sum_stage1_d[i];
+        end
+        for (int i = 0; i < 2; i++) begin
+            sum_stage2_q[i] <= sum_stage2_d[i];
         end
         state_q <= state_d;
         operand1_q <= operand1_d;
@@ -159,12 +169,21 @@ always_comb begin
     tx_index_d = tx_index_q;
 
     add_result = '0;
-    operand = '0;
-    start_byte = '0;
+    start_byte = 0;
+    sum_final = '0;
 
     for (int i = 0; i < 16; i++) begin
         operand_d[i] = operand_q[i];
     end
+
+    for (int i = 0; i < 4; i++) begin
+        sum_stage1_d[i] = sum_stage1_q[i];
+    end
+
+    for (int i = 0; i < 2; i++) begin
+        sum_stage2_d[i] = sum_stage2_q[i];
+    end
+
 
     case (state_q)
         IDLE: begin
@@ -210,18 +229,25 @@ always_comb begin
                     state_d = TRANSMIT;
                 end
                 OPCODE_ADD32: begin
-                    for (int i = 0; i < 16; i++) begin
+                    for (int i = 0; i < 4; i++) begin
+                        start_byte = i * 4;
                         if (i < (lsb_q / 4)) begin
-                            start_byte = i * 4;
-                            operand = {operand_q[start_byte + 3], operand_q[start_byte + 2],
-                                    operand_q[start_byte + 1], operand_q[start_byte + 0]};
-                            add_result += operand;
+                            sum_stage1_d[i] = {operand_q[start_byte + 3], operand_q[start_byte + 2],
+                                             operand_q[start_byte + 1], operand_q[start_byte + 0]};
+                        end else begin
+                            sum_stage1_d[i] = 32'h0;
                         end
                     end
-                    tx_buffer_d = {add_result[31:24], add_result[23:16], add_result[15:8], add_result[7:0]};
+
+                    sum_stage2_d[0] = sum_stage1_d[0] + sum_stage1_d[1];
+                    sum_stage2_d[1] = sum_stage1_d[2] + sum_stage1_d[3];
+
+                    sum_final = sum_stage2_d[0] + sum_stage2_d[1];
+
+                    tx_buffer_d = {sum_final[31:24], sum_final[23:16], sum_final[15:8], sum_final[7:0]};
                     tx_byte_count_d = 4;
                     tx_index_d = 0;
-                    $display("[DUT] Sum Result=0x%h", add_result);
+                    $display("[DUT] Sum Result=0x%h", sum_final);
                     state_d = TRANSMIT;
                 end
                 OPCODE_MUL32: begin

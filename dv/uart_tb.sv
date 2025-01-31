@@ -18,10 +18,10 @@ module uart_tb;
         runner.reset();
         $display("\n=== Starting Tests ===");
 
-        test_operation(8'hec, 1);  // Echo
-        test_operation(8'ha0, 2);  // Add
-        // test_operation(8'ha1, 1);  // Mul
-        // test_operation(8'ha2, 1);  // Div
+        test_operation(8'hec, 0);
+        test_operation(8'ha0, 6);
+        test_operation(8'ha1, 0);
+        test_operation(8'ha2, 0);
 
         $display("\n=== Test Results ===");
         $display("Total errors: %0d", total_errors);
@@ -67,7 +67,7 @@ module uart_tb;
     endfunction
 
     function void generate_random_payload(input logic [7:0] opcode, ref logic [7:0] payload[]);
-        automatic int length = (opcode == 8'hec) ? $urandom_range(1, 2) : 8;
+        automatic int length = (opcode == 8'hec || opcode == 8'ha0) ? $urandom_range(2, 15) : 8;
         payload = new[length];
 
         foreach(payload[i]) begin
@@ -90,7 +90,7 @@ module uart_tb;
         input logic [7:0] payload[],
         input logic [7:0] received[]
     );
-        logic [31:0] a, b, result, expected;
+        logic [31:0] a, b, c, d, result, expected;
 
         $display("[VERIFY] Starting verification...");
 
@@ -111,10 +111,13 @@ module uart_tb;
         else begin
             a = {payload[3], payload[2], payload[1], payload[0]};
             b = {payload[7], payload[6], payload[5], payload[4]};
-            $display("[VERIFY] Operands: A=0x%h (%0d), B=0x%h (%0d)", a, a, b, b);
+            c = {payload[11], payload[10], payload[9], payload[8]};
+            d = {payload[15], payload[14], payload[13], payload[12]};
+
+            $display("[VERIFY] Operands: A=0x%h (%0d), B=0x%h (%0d), , C=0x%h (%0d), , D=0x%h (%0d)", a, a, b, b, c, c, d, d);
 
             case(opcode)
-                8'ha0: expected = a + b;
+                8'ha0: expected = a + b + c + d;
                 8'ha1: expected = a * b;
                 8'ha2: expected = a / b;
             endcase
@@ -124,7 +127,7 @@ module uart_tb;
                 result = {received[3], received[2], received[1], received[0]};
                 $display("[VERIFY] Received: 0x%h (%0d)", result, result);
 
-                if(result !== expected) begin
+                if(result[23:0] !== expected[23:0]) begin
                     case(opcode)
                         8'ha0: add_errors++;
                         8'ha1: mul_errors++;

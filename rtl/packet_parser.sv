@@ -38,10 +38,33 @@ logic [127:0] tx_buffer_d, tx_buffer_q;
 logic [7:0] tx_byte_count_d, tx_byte_count_q;
 logic [7:0] tx_index_d, tx_index_q;
 
-logic mul_valid, div_valid;
-logic mul_ready, div_ready;
+logic add_valid, mul_valid, div_valid;
+logic add_ready, mul_ready, div_ready;
 
 logic [31:0] add_result, mul_result, div_quotient, div_remainder;
+
+logic        adder_valid_in;
+logic        adder_ready_out;
+
+logic        adder_valid_out;
+logic        adder_ready_in;
+
+logic [31:0] start_byte;
+logic [31:0] operand;
+
+
+// // Instantiate Adder
+// adder_with_handshake adder_inst (
+//     .clk        (clk_i),
+//     .rst_n      (~rst_i),      // Active low reset
+//     .a          (operand1_q),
+//     .b          (operand2_q),
+//     .valid_in   (add_valid),
+//     .ready_out  (adder_ready_out),
+//     .sum        (add_result),
+//     .valid_out  (adder_valid_out),
+//     .ready_in   (adder_ready_in)
+// );
 
 bsg_imul_iterative #(.width_p(32)) mul_inst (
     .clk_i(clk_i),
@@ -70,23 +93,6 @@ simple_divider #(
     .remainder_o(div_remainder),
     .ready_o(div_ready)
 );
-
-// bsg_idiv_iterative #(
-//     .width_p(32),
-//     .bits_per_iter_p(1)
-// ) div_inst (
-//     .clk_i(clk_i),
-//     .reset_i(rst_i),
-//     .v_i(div_valid),
-//     .ready_and_o(),
-//     .dividend_i(operand1_q),
-//     .divisor_i(operand2_q),
-//     .signed_div_i(1'b0),
-//     .v_o(div_ready),
-//     .quotient_o(div_quotient),
-//     .remainder_o(div_remainder),
-//     .yumi_i(1'b1)
-// );
 
 always_ff @(posedge clk_i or posedge rst_i) begin
     if (rst_i) begin
@@ -153,6 +159,8 @@ always_comb begin
     tx_index_d = tx_index_q;
 
     add_result = '0;
+    operand = '0;
+    start_byte = '0;
 
     for (int i = 0; i < 16; i++) begin
         operand_d[i] = operand_q[i];
@@ -202,16 +210,25 @@ always_comb begin
                     state_d = TRANSMIT;
                 end
                 OPCODE_ADD32: begin
-                    add_result = operand1_q + operand2_q;
+                    for (int i = 0; i < 16; i++) begin
+                        if (i < (lsb_q / 4)) begin
+                            start_byte = i * 4;
+                            operand = {operand_q[start_byte + 3], operand_q[start_byte + 2],
+                                    operand_q[start_byte + 1], operand_q[start_byte + 0]};
+                            add_result += operand;
+                        end
+                    end
                     tx_buffer_d = {add_result[31:24], add_result[23:16], add_result[15:8], add_result[7:0]};
                     tx_byte_count_d = 4;
                     tx_index_d = 0;
+                    $display("[DUT] Sum Result=0x%h", add_result);
                     state_d = TRANSMIT;
                 end
                 OPCODE_MUL32: begin
                     mul_valid = 1'b1;
                     if (mul_ready) begin
                         tx_buffer_d = {mul_result[31:24], mul_result[23:16], mul_result[15:8], mul_result[7:0]};
+                        $display("[DUT] A=0x%h, B=0x%h, Result=0x%h", operand1_q, operand2_q, mul_result);
                         tx_byte_count_d = 4;
                         tx_index_d = 0;
                         state_d = TRANSMIT;

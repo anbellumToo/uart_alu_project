@@ -10,7 +10,7 @@ RTL := $(shell \
 
 SV2V_ARGS := $(shell \
  BASEJUMP_STL_DIR=$(BASEJUMP_STL_DIR) \
- python3 misc/convert_filelist.py sv2v rtl/rtl.f \
+ python3 misc/convert_filelist.py sv2v rtl/rtl.f | grep -v "dv/uart_runner.sv" \
 )
 
 .PHONY: lint sim gls icestorm_icebreaker_gls icestorm_icebreaker_program icestorm_icebreaker_flash clean

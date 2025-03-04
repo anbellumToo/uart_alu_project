@@ -131,9 +131,8 @@ endtask
                         (opcode == 8'ha2) ? 8 : 4;
 
         $display("[RX] Waiting for %0d bytes...", expected_bytes);
-        `ifndef SYNTHESIS
+
         data = new[expected_bytes];
-        `endif
 
         receiving = 1;
 
